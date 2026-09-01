@@ -1,5 +1,7 @@
 # Low-Rank Eligibility Traces for Delayed Credit Assignment
 
+DOI: 10.5281/zenodo.22217985
+
 [![Tests](https://github.com/MRDOANE/low-rank-eligibility-traces/actions/workflows/tests.yml/badge.svg)](https://github.com/MRDOANE/low-rank-eligibility-traces/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
