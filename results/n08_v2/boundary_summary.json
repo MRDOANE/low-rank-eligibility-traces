@@ -1,0 +1,3169 @@
+{
+  "analysis": {
+    "bootstrap_over_seed_aggregates": {
+      "candidate_full_gain_retention": {
+        "lower_95": 0.9831855700307136,
+        "mean": 1.0010222481627908,
+        "upper_95": 1.0202176443646382
+      },
+      "candidate_gradient_cosine": {
+        "lower_95": 0.8041444468498229,
+        "mean": 0.8043952519785273,
+        "upper_95": 0.804556055448272
+      },
+      "candidate_relative_excess_vs_replay": {
+        "lower_95": -0.19026374729642903,
+        "mean": -0.04738150150691944,
+        "upper_95": 0.10135912446306812
+      },
+      "candidate_relative_excess_vs_strongest_control": {
+        "lower_95": -0.19026374729642903,
+        "mean": -0.04738150150691944,
+        "upper_95": 0.10135912446306812
+      },
+      "full_learning_fraction": {
+        "lower_95": 0.9130561468116106,
+        "mean": 0.9292586475894001,
+        "upper_95": 0.9387398288493541
+      }
+    },
+    "cells": [
+      {
+        "candidate_full_gain_retention": 0.9749294853420625,
+        "candidate_gradient_cosine": 0.8211554295366461,
+        "candidate_ood_mse": 2.65040459150138e-05,
+        "candidate_relative_excess_vs_replay": 0.18398449474916087,
+        "candidate_relative_excess_vs_strongest_control": 0.18398449474916087,
+        "full_learning_fraction": 0.9403646332632553,
+        "full_trace_ood_mse": 1.8994873850412357e-05,
+        "horizon_multiplier": 4,
+        "initial_ood_mse": 0.00031851692862498265,
+        "latent_rank": 8,
+        "multi_timescale_ood_mse": 6.260130006315497e-05,
+        "replay_ood_mse": 2.2385467066972826e-05,
+        "seed": 607,
+        "task": "boundary_latent_08_horizon_04x"
+      },
+      {
+        "candidate_full_gain_retention": 1.000570756865265,
+        "candidate_gradient_cosine": 0.8212207784435965,
+        "candidate_ood_mse": 1.9894199795089662e-05,
+        "candidate_relative_excess_vs_replay": -0.05407265155228942,
+        "candidate_relative_excess_vs_strongest_control": -0.05407265155228942,
+        "full_learning_fraction": 0.9371913268137572,
+        "full_trace_ood_mse": 2.0065083541946176e-05,
+        "horizon_multiplier": 4,
+        "initial_ood_mse": 0.000319463579216972,
+        "latent_rank": 8,
+        "multi_timescale_ood_mse": 4.659317710320465e-05,
+        "replay_ood_mse": 2.1031424694228917e-05,
+        "seed": 701,
+        "task": "boundary_latent_08_horizon_04x"
+      },
+      {
+        "candidate_full_gain_retention": 1.037909354108052,
+        "candidate_gradient_cosine": 0.8211726060780612,
+        "candidate_ood_mse": 2.239139818508799e-05,
+        "candidate_relative_excess_vs_replay": -0.19482710033765258,
+        "candidate_relative_excess_vs_strongest_control": -0.19482710033765258,
+        "full_learning_fraction": 0.8971322321861741,
+        "full_trace_ood_mse": 3.345073916231437e-05,
+        "horizon_multiplier": 4,
+        "initial_ood_mse": 0.0003251819289289415,
+        "latent_rank": 8,
+        "multi_timescale_ood_mse": 5.490701247860367e-05,
+        "replay_ood_mse": 2.7809428502223454e-05,
+        "seed": 809,
+        "task": "boundary_latent_08_horizon_04x"
+      },
+      {
+        "candidate_full_gain_retention": 0.9914416547193649,
+        "candidate_gradient_cosine": 0.7878150777383284,
+        "candidate_ood_mse": 2.1978021929195773e-05,
+        "candidate_relative_excess_vs_replay": 0.0187337541769754,
+        "candidate_relative_excess_vs_strongest_control": 0.0187337541769754,
+        "full_learning_fraction": 0.931595300951215,
+        "full_trace_ood_mse": 1.9683777888227876e-05,
+        "horizon_multiplier": 8,
+        "initial_ood_mse": 0.00028775476190882426,
+        "latent_rank": 8,
+        "multi_timescale_ood_mse": 6.539798778248951e-05,
+        "replay_ood_mse": 2.1573862492611322e-05,
+        "seed": 607,
+        "task": "boundary_latent_08_horizon_08x"
+      },
+      {
+        "candidate_full_gain_retention": 0.9987563033207765,
+        "candidate_gradient_cosine": 0.7870681152560494,
+        "candidate_ood_mse": 1.783135727843425e-05,
+        "candidate_relative_excess_vs_replay": -0.052407111822505445,
+        "candidate_relative_excess_vs_strongest_control": -0.052407111822505445,
+        "full_learning_fraction": 0.9402883308849515,
+        "full_trace_ood_mse": 1.7488843999065768e-05,
+        "horizon_multiplier": 8,
+        "initial_ood_mse": 0.0002928882119401048,
+        "latent_rank": 8,
+        "multi_timescale_ood_mse": 5.639397810834149e-05,
+        "replay_ood_mse": 1.881752965952425e-05,
+        "seed": 701,
+        "task": "boundary_latent_08_horizon_08x"
+      },
+      {
+        "candidate_full_gain_retention": 1.0025259346212247,
+        "candidate_gradient_cosine": 0.7879395048184828,
+        "candidate_ood_mse": 1.830630480981199e-05,
+        "candidate_relative_excess_vs_replay": -0.18570039425520551,
+        "candidate_relative_excess_vs_strongest_control": -0.18570039425520551,
+        "full_learning_fraction": 0.9289800614370474,
+        "full_trace_ood_mse": 1.893182403970665e-05,
+        "horizon_multiplier": 8,
+        "initial_ood_mse": 0.0002665705493806551,
+        "latent_rank": 8,
+        "multi_timescale_ood_mse": 0.00011347489392695327,
+        "replay_ood_mse": 2.248104343986294e-05,
+        "seed": 809,
+        "task": "boundary_latent_08_horizon_08x"
+      }
+    ],
+    "checks": {
+      "candidate_gain_retention_lower_95_is_at_least_0_94": true,
+      "candidate_gradient_cosine_is_at_least_0_85_at_every_horizon": false,
+      "candidate_is_noninferior_to_replay_with_0_03_margin": false,
+      "candidate_is_noninferior_to_strongest_control_with_0_05_margin": false,
+      "candidate_mean_gain_retention_is_at_least_0_97": true,
+      "candidate_mean_gradient_cosine_is_at_least_0_90": false,
+      "candidate_respects_rank_specific_state_budget": true,
+      "every_task_horizon_retains_at_least_0_90": true,
+      "full_trace_learns_at_every_horizon": true,
+      "full_trace_learns_at_least_half_of_available_error": true,
+      "optimizer_steps_are_matched": true,
+      "parameters_are_matched": true
+    },
+    "decisive_failure": false,
+    "gate_passed": false,
+    "horizon_aggregates": [
+      {
+        "candidate_full_gain_retention": 1.0044698654384598,
+        "candidate_gradient_cosine": 0.8211829380194345,
+        "candidate_relative_gain_over_replay": 0.021638419046927048,
+        "candidate_relative_gain_over_strongest_control": 0.021638419046927048,
+        "full_learning_fraction": 0.9248960640877288,
+        "horizon_multiplier": 4
+      },
+      {
+        "candidate_full_gain_retention": 0.997574630887122,
+        "candidate_gradient_cosine": 0.7876075659376202,
+        "candidate_relative_gain_over_replay": 0.07312458396691185,
+        "candidate_relative_gain_over_strongest_control": 0.07312458396691185,
+        "full_learning_fraction": 0.9336212310910712,
+        "horizon_multiplier": 8
+      }
+    ],
+    "long_horizon_gain_over_replay_bootstrap": {
+      "lower_95": -0.10135912446306812,
+      "mean": 0.04738150150691944,
+      "upper_95": 0.19026374729642903
+    },
+    "rank_four_rescue_warranted": false,
+    "reference_invalid": false,
+    "seed_aggregates": [
+      {
+        "candidate_full_gain_retention": 0.9831855700307137,
+        "candidate_gradient_cosine": 0.8044852536374872,
+        "candidate_relative_excess_vs_replay": 0.10135912446306813,
+        "candidate_relative_excess_vs_strongest_control": 0.10135912446306813,
+        "full_learning_fraction": 0.9359799671072351,
+        "seed": 607
+      },
+      {
+        "candidate_full_gain_retention": 0.9996635300930208,
+        "candidate_gradient_cosine": 0.8041444468498229,
+        "candidate_relative_excess_vs_replay": -0.05323988168739743,
+        "candidate_relative_excess_vs_strongest_control": -0.05323988168739743,
+        "full_learning_fraction": 0.9387398288493543,
+        "seed": 701
+      },
+      {
+        "candidate_full_gain_retention": 1.0202176443646382,
+        "candidate_gradient_cosine": 0.804556055448272,
+        "candidate_relative_excess_vs_replay": -0.19026374729642903,
+        "candidate_relative_excess_vs_strongest_control": -0.19026374729642903,
+        "full_learning_fraction": 0.9130561468116107,
+        "seed": 809
+      }
+    ],
+    "state": {
+      "candidate_floats": 588,
+      "candidate_fraction_of_full": 0.3402777777777778,
+      "full_trace_floats": 1728
+    },
+    "strong_long_horizon_cells": 1,
+    "strong_pareto_signal": false,
+    "task_horizon_aggregates": [
+      {
+        "candidate_full_gain_retention": 1.0044698654384598,
+        "candidate_relative_gain_over_replay": 0.021638419046927048,
+        "horizon_multiplier": 4,
+        "latent_rank": 8
+      },
+      {
+        "candidate_full_gain_retention": 0.997574630887122,
+        "candidate_relative_gain_over_replay": 0.07312458396691185,
+        "horizon_multiplier": 8,
+        "latent_rank": 8
+      }
+    ],
+    "trace_rank": 4
+  },
+  "boundary_noncatastrophic": true,
+  "boundary_supportive": true,
+  "initial_evaluations": {
+    "boundary_latent_08_horizon_04x:607": {
+      "aggregate": {
+        "mean_mse": 0.00028204226691741496,
+        "ood_mean_mse": 0.00031851692862498265
+      },
+      "iid": {
+        "terminal_mae": 0.011096984148025513,
+        "terminal_mse": 0.00017261828179471195
+      },
+      "joint_shift": {
+        "terminal_mae": 0.016689281910657883,
+        "terminal_mse": 0.00037864246405661106
+      },
+      "noise_shift": {
+        "terminal_mae": 0.011249670758843422,
+        "terminal_mse": 0.00017619531718082726
+      },
+      "scale_shift": {
+        "terminal_mae": 0.017486386001110077,
+        "terminal_mse": 0.0004007130046375096
+      }
+    },
+    "boundary_latent_08_horizon_04x:701": {
+      "aggregate": {
+        "mean_mse": 0.0002800011425279081,
+        "ood_mean_mse": 0.000319463579216972
+      },
+      "iid": {
+        "terminal_mae": 0.010711207054555416,
+        "terminal_mse": 0.00016161383246071637
+      },
+      "joint_shift": {
+        "terminal_mae": 0.01730206608772278,
+        "terminal_mse": 0.00040486452053301036
+      },
+      "noise_shift": {
+        "terminal_mae": 0.010524267330765724,
+        "terminal_mse": 0.00016351754311472178
+      },
+      "scale_shift": {
+        "terminal_mae": 0.017263557761907578,
+        "terminal_mse": 0.00039000867400318384
+      }
+    },
+    "boundary_latent_08_horizon_04x:809": {
+      "aggregate": {
+        "mean_mse": 0.0002886820730054751,
+        "ood_mean_mse": 0.0003251819289289415
+      },
+      "iid": {
+        "terminal_mae": 0.011400066316127777,
+        "terminal_mse": 0.00017918250523507595
+      },
+      "joint_shift": {
+        "terminal_mae": 0.01735703833401203,
+        "terminal_mse": 0.0004000174521934241
+      },
+      "noise_shift": {
+        "terminal_mae": 0.010941775515675545,
+        "terminal_mse": 0.00016600041999481618
+      },
+      "scale_shift": {
+        "terminal_mae": 0.017764782533049583,
+        "terminal_mse": 0.0004095279145985842
+      }
+    },
+    "boundary_latent_08_horizon_08x:607": {
+      "aggregate": {
+        "mean_mse": 0.00025203931727446616,
+        "ood_mean_mse": 0.00028775476190882426
+      },
+      "iid": {
+        "terminal_mae": 0.010634500533342361,
+        "terminal_mse": 0.0001448929833713919
+      },
+      "joint_shift": {
+        "terminal_mae": 0.017969034612178802,
+        "terminal_mse": 0.0003816504904534668
+      },
+      "noise_shift": {
+        "terminal_mae": 0.009132311679422855,
+        "terminal_mse": 0.00011246732901781797
+      },
+      "scale_shift": {
+        "terminal_mae": 0.017688224092125893,
+        "terminal_mse": 0.000369146466255188
+      }
+    },
+    "boundary_latent_08_horizon_08x:701": {
+      "aggregate": {
+        "mean_mse": 0.0002571460427134298,
+        "ood_mean_mse": 0.0002928882119401048
+      },
+      "iid": {
+        "terminal_mae": 0.010721271857619286,
+        "terminal_mse": 0.00014991953503340483
+      },
+      "joint_shift": {
+        "terminal_mae": 0.017094749957323074,
+        "terminal_mse": 0.0003536067670211196
+      },
+      "noise_shift": {
+        "terminal_mae": 0.01030028983950615,
+        "terminal_mse": 0.0001382468908559531
+      },
+      "scale_shift": {
+        "terminal_mae": 0.018169362097978592,
+        "terminal_mse": 0.0003868109779432416
+      }
+    },
+    "boundary_latent_08_horizon_08x:809": {
+      "aggregate": {
+        "mean_mse": 0.0002352498377149459,
+        "ood_mean_mse": 0.0002665705493806551
+      },
+      "iid": {
+        "terminal_mae": 0.010433719493448734,
+        "terminal_mse": 0.00014128770271781832
+      },
+      "joint_shift": {
+        "terminal_mae": 0.016099577769637108,
+        "terminal_mse": 0.0003133661230094731
+      },
+      "noise_shift": {
+        "terminal_mae": 0.009930607862770557,
+        "terminal_mse": 0.00013147658319212496
+      },
+      "scale_shift": {
+        "terminal_mae": 0.01741155795753002,
+        "terminal_mse": 0.0003548689419403672
+      }
+    }
+  },
+  "project": "N08 Low-Rank Eligibility Traces for Delayed Outcomes",
+  "rows": [
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 1.7571675925864838e-05,
+          "ood_mean_mse": 1.8994873850412357e-05
+        },
+        "iid": {
+          "terminal_mae": 0.0029093660414218903,
+          "terminal_mse": 1.3302082152222283e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.0035463054664433002,
+          "terminal_mse": 1.956183223228436e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.0033490925561636686,
+          "terminal_mse": 1.7519112589070573e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.003559056669473648,
+          "terminal_mse": 1.9903676729882136e-05
+        }
+      },
+      "horizon_multiplier": 4,
+      "latent_rank": 8,
+      "learning_rate": 0.003,
+      "method": "full_trace",
+      "method_key": "full_trace",
+      "seed": 607,
+      "sequence_length": 96,
+      "task": "boundary_latent_08_horizon_04x",
+      "trace_rank": 0,
+      "training": {
+        "final_gradient_cosine": 1.0,
+        "final_train_mse": 1.6663834685459733e-05,
+        "mean_gradient_cosine": 1.0,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 5.469203155487776,
+        "state_bytes_fp32_per_episode": 6912,
+        "state_floats_per_episode": 1728,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00405205087736249,
+            "step": 1,
+            "terminal_mse": 0.000205573916900903
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00023891653108876199,
+            "step": 50,
+            "terminal_mse": 1.8616603483678773e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 6.91840541549027e-05,
+            "step": 100,
+            "terminal_mse": 1.6492656868649647e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00042166683124378324,
+            "step": 150,
+            "terminal_mse": 1.1936917871935293e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0004519711364991963,
+            "step": 200,
+            "terminal_mse": 1.4618606655858457e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 8.127717592287809e-05,
+            "step": 250,
+            "terminal_mse": 1.416554550814908e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00010240214760415256,
+            "step": 300,
+            "terminal_mse": 1.5229763448587619e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0005108786281198263,
+            "step": 350,
+            "terminal_mse": 1.4617140550399199e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0005566084873862565,
+            "step": 400,
+            "terminal_mse": 1.6692487406544387e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0006109563983045518,
+            "step": 450,
+            "terminal_mse": 1.7870290321297944e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00026490638265386224,
+            "step": 500,
+            "terminal_mse": 9.565756045049056e-06
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00040839516441337764,
+            "step": 550,
+            "terminal_mse": 1.6663834685459733e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 2.3500203496951144e-05,
+          "ood_mean_mse": 2.65040459150138e-05
+        },
+        "iid": {
+          "terminal_mae": 0.0030564209446310997,
+          "terminal_mse": 1.4488676242763177e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.004377859178930521,
+          "terminal_mse": 2.9297665605554357e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.0031846065539866686,
+          "terminal_mse": 1.6144524124683812e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.0047489311546087265,
+          "terminal_mse": 3.406994801480323e-05
+        }
+      },
+      "horizon_multiplier": 4,
+      "latent_rank": 8,
+      "learning_rate": 0.003,
+      "method": "lowrank_svd",
+      "method_key": "lowrank_svd:r4",
+      "seed": 607,
+      "sequence_length": 96,
+      "task": "boundary_latent_08_horizon_04x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.824938952922821,
+        "final_train_mse": 2.013790435739793e-05,
+        "mean_gradient_cosine": 0.8211554295366461,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 481.2624830380082,
+        "state_bytes_fp32_per_episode": 2352,
+        "state_floats_per_episode": 588,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.8150507807731628,
+            "gradient_norm": 0.0023829059209674597,
+            "step": 1,
+            "terminal_mse": 0.000205573916900903
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8199687004089355,
+            "gradient_norm": 0.0002965347666759044,
+            "step": 50,
+            "terminal_mse": 1.8539871234679595e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.820409893989563,
+            "gradient_norm": 8.673927368363366e-05,
+            "step": 100,
+            "terminal_mse": 1.5365620129159652e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8169833421707153,
+            "gradient_norm": 0.0002442582917865366,
+            "step": 150,
+            "terminal_mse": 1.1615022231126204e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8201122283935547,
+            "gradient_norm": 0.00025843302137218416,
+            "step": 200,
+            "terminal_mse": 1.5193499166343827e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8215014934539795,
+            "gradient_norm": 0.00020915293134748936,
+            "step": 250,
+            "terminal_mse": 1.6203770428546704e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8189243078231812,
+            "gradient_norm": 0.00012465674080885947,
+            "step": 300,
+            "terminal_mse": 1.743328721204307e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8180583119392395,
+            "gradient_norm": 0.0003340687835589051,
+            "step": 350,
+            "terminal_mse": 1.5686629922129214e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8216208219528198,
+            "gradient_norm": 0.0002364490501349792,
+            "step": 400,
+            "terminal_mse": 1.5802088455529884e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8241660594940186,
+            "gradient_norm": 0.0002854914637282491,
+            "step": 450,
+            "terminal_mse": 1.7824018868850544e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8214234113693237,
+            "gradient_norm": 9.439150016987696e-05,
+            "step": 500,
+            "terminal_mse": 1.0949934221571311e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.824938952922821,
+            "gradient_norm": 0.0003849670756608248,
+            "step": 550,
+            "terminal_mse": 2.013790435739793e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 2.0249339286237955e-05,
+          "ood_mean_mse": 2.2385467066972826e-05
+        },
+        "iid": {
+          "terminal_mae": 0.0029062603134661913,
+          "terminal_mse": 1.384095594403334e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.003939028829336166,
+          "terminal_mse": 2.355175092816353e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.0032336153090000153,
+          "terminal_mse": 1.6709815099602565e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.004182679578661919,
+          "terminal_mse": 2.6894835173152387e-05
+        }
+      },
+      "horizon_multiplier": 4,
+      "latent_rank": 8,
+      "learning_rate": 0.003,
+      "method": "replay_reservoir",
+      "method_key": "replay_reservoir:r4",
+      "seed": 607,
+      "sequence_length": 96,
+      "task": "boundary_latent_08_horizon_04x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.8845475316047668,
+        "final_train_mse": 1.7739734175847843e-05,
+        "mean_gradient_cosine": 0.8850447030500932,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 5.63742982968688,
+        "state_bytes_fp32_per_episode": 2300,
+        "state_floats_per_episode": 575,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.8832676410675049,
+            "gradient_norm": 0.0040999045595526695,
+            "step": 1,
+            "terminal_mse": 0.000205573916900903
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8870542049407959,
+            "gradient_norm": 0.0004283456946723163,
+            "step": 50,
+            "terminal_mse": 2.2673746570944786e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8856886625289917,
+            "gradient_norm": 0.00016212921764235944,
+            "step": 100,
+            "terminal_mse": 1.600668292667251e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8872329592704773,
+            "gradient_norm": 0.0003739201929420233,
+            "step": 150,
+            "terminal_mse": 1.1962663847953081e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.885186493396759,
+            "gradient_norm": 0.00044351842370815575,
+            "step": 200,
+            "terminal_mse": 1.4634819308412261e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.888688325881958,
+            "gradient_norm": 0.0001526948472019285,
+            "step": 250,
+            "terminal_mse": 1.60412018885836e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8848961591720581,
+            "gradient_norm": 0.0001661261630943045,
+            "step": 300,
+            "terminal_mse": 1.591608815942891e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8896378874778748,
+            "gradient_norm": 0.0004953271709382534,
+            "step": 350,
+            "terminal_mse": 1.7295189536525868e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8826322555541992,
+            "gradient_norm": 0.0006055954727344215,
+            "step": 400,
+            "terminal_mse": 1.7172325897263363e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8837995529174805,
+            "gradient_norm": 0.0004063668893650174,
+            "step": 450,
+            "terminal_mse": 1.36303015096928e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8847353458404541,
+            "gradient_norm": 0.00017263670451939106,
+            "step": 500,
+            "terminal_mse": 1.0252377251163125e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8845475316047668,
+            "gradient_norm": 0.000311423180392012,
+            "step": 550,
+            "terminal_mse": 1.7739734175847843e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 5.4538446420338005e-05,
+          "ood_mean_mse": 6.260130006315497e-05
+        },
+        "iid": {
+          "terminal_mae": 0.004386224318295717,
+          "terminal_mse": 3.0349885491887107e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.006936090998351574,
+          "terminal_mse": 7.335387635976076e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.0048528509214520454,
+          "terminal_mse": 3.602069409680553e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.007239651866257191,
+          "terminal_mse": 7.842932973289862e-05
+        }
+      },
+      "horizon_multiplier": 4,
+      "latent_rank": 8,
+      "learning_rate": 0.003,
+      "method": "multi_timescale",
+      "method_key": "multi_timescale:r4",
+      "seed": 607,
+      "sequence_length": 96,
+      "task": "boundary_latent_08_horizon_04x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.3228205144405365,
+        "final_train_mse": 3.85960956919007e-05,
+        "mean_gradient_cosine": 0.31860396260564977,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 7.875131603330374,
+        "state_bytes_fp32_per_episode": 2304,
+        "state_floats_per_episode": 576,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.3111029267311096,
+            "gradient_norm": 0.0008973809308372438,
+            "step": 1,
+            "terminal_mse": 0.000205573916900903
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3120133578777313,
+            "gradient_norm": 0.00016091011639218777,
+            "step": 50,
+            "terminal_mse": 6.506210775114596e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3243005573749542,
+            "gradient_norm": 0.00019174694898538291,
+            "step": 100,
+            "terminal_mse": 4.950736547471024e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3146582245826721,
+            "gradient_norm": 0.00021370196191128343,
+            "step": 150,
+            "terminal_mse": 5.060658440925181e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3170335590839386,
+            "gradient_norm": 0.0001700101711321622,
+            "step": 200,
+            "terminal_mse": 4.096589327673428e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3194812536239624,
+            "gradient_norm": 0.00013737467816099524,
+            "step": 250,
+            "terminal_mse": 2.185402081522625e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.306024432182312,
+            "gradient_norm": 0.0003573446301743388,
+            "step": 300,
+            "terminal_mse": 7.199530955404043e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.31200551986694336,
+            "gradient_norm": 0.00020537256204988807,
+            "step": 350,
+            "terminal_mse": 5.475123907672241e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.31512826681137085,
+            "gradient_norm": 0.00018487396300770342,
+            "step": 400,
+            "terminal_mse": 6.228807615116239e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3252435326576233,
+            "gradient_norm": 0.00015955751587171108,
+            "step": 450,
+            "terminal_mse": 3.308668965473771e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3285072147846222,
+            "gradient_norm": 0.00019217916997149587,
+            "step": 500,
+            "terminal_mse": 3.0267057809396647e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3228205144405365,
+            "gradient_norm": 0.00023115705698728561,
+            "step": 550,
+            "terminal_mse": 3.85960956919007e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 1.8023468328465242e-05,
+          "ood_mean_mse": 2.0065083541946176e-05
+        },
+        "iid": {
+          "terminal_mae": 0.002735619433224201,
+          "terminal_mse": 1.1898622688022442e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.003513445146381855,
+          "terminal_mse": 1.9987088307971135e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.0032616425305604935,
+          "terminal_mse": 1.6165697161341086e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.003950848244130611,
+          "terminal_mse": 2.4042465156526305e-05
+        }
+      },
+      "horizon_multiplier": 4,
+      "latent_rank": 8,
+      "learning_rate": 0.003,
+      "method": "full_trace",
+      "method_key": "full_trace",
+      "seed": 701,
+      "sequence_length": 96,
+      "task": "boundary_latent_08_horizon_04x",
+      "trace_rank": 0,
+      "training": {
+        "final_gradient_cosine": 1.0,
+        "final_train_mse": 1.3872149793314748e-05,
+        "mean_gradient_cosine": 1.0,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 5.4183037877082825,
+        "state_bytes_fp32_per_episode": 6912,
+        "state_floats_per_episode": 1728,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0036687818355858326,
+            "step": 1,
+            "terminal_mse": 0.00016904750373214483
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0003805479209404439,
+            "step": 50,
+            "terminal_mse": 2.2255255316849798e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0001652071950957179,
+            "step": 100,
+            "terminal_mse": 1.1734676263586152e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 7.762060704408213e-05,
+            "step": 150,
+            "terminal_mse": 1.3589927220891695e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.000327896821545437,
+            "step": 200,
+            "terminal_mse": 1.67678008438088e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00028336766990832984,
+            "step": 250,
+            "terminal_mse": 1.6469894035253674e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0002521857968531549,
+            "step": 300,
+            "terminal_mse": 1.3295639291754924e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0007553283357992768,
+            "step": 350,
+            "terminal_mse": 1.9535114915925078e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0005582268349826336,
+            "step": 400,
+            "terminal_mse": 1.2974647688679397e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0005926387384533882,
+            "step": 450,
+            "terminal_mse": 1.753599281073548e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0007398901507258415,
+            "step": 500,
+            "terminal_mse": 1.3847515219822526e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00045120844151824713,
+            "step": 550,
+            "terminal_mse": 1.3872149793314748e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 1.840872300817864e-05,
+          "ood_mean_mse": 1.9894199795089662e-05
+        },
+        "iid": {
+          "terminal_mae": 0.0029734729323536158,
+          "terminal_mse": 1.3952292647445574e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.0035153953358531,
+          "terminal_mse": 1.9744853489100933e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.003531837370246649,
+          "terminal_mse": 1.9096587493550032e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.0036904029548168182,
+          "terminal_mse": 2.084115840261802e-05
+        }
+      },
+      "horizon_multiplier": 4,
+      "latent_rank": 8,
+      "learning_rate": 0.003,
+      "method": "lowrank_svd",
+      "method_key": "lowrank_svd:r4",
+      "seed": 701,
+      "sequence_length": 96,
+      "task": "boundary_latent_08_horizon_04x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.8219011425971985,
+        "final_train_mse": 1.2670771866396535e-05,
+        "mean_gradient_cosine": 0.8212207784435965,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 479.6255704537034,
+        "state_bytes_fp32_per_episode": 2352,
+        "state_floats_per_episode": 588,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.8165827989578247,
+            "gradient_norm": 0.0021434917580336332,
+            "step": 1,
+            "terminal_mse": 0.00016904750373214483
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8191867470741272,
+            "gradient_norm": 0.0001639166584936902,
+            "step": 50,
+            "terminal_mse": 2.1955282136332244e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8177449703216553,
+            "gradient_norm": 0.0001778067962732166,
+            "step": 100,
+            "terminal_mse": 1.4006383025844116e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8220285177230835,
+            "gradient_norm": 0.00010041085624834523,
+            "step": 150,
+            "terminal_mse": 1.4086266673984937e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8233565092086792,
+            "gradient_norm": 0.00025179580552503467,
+            "step": 200,
+            "terminal_mse": 1.9166782294632867e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.826056182384491,
+            "gradient_norm": 0.00012576916196849197,
+            "step": 250,
+            "terminal_mse": 1.698037885944359e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8218318223953247,
+            "gradient_norm": 0.00014840459334664047,
+            "step": 300,
+            "terminal_mse": 1.4335060768644325e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8215925693511963,
+            "gradient_norm": 0.0006016636034473777,
+            "step": 350,
+            "terminal_mse": 2.388721622992307e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8209506273269653,
+            "gradient_norm": 0.0004112407041247934,
+            "step": 400,
+            "terminal_mse": 1.5173005522228777e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8205076456069946,
+            "gradient_norm": 0.0003000884607899934,
+            "step": 450,
+            "terminal_mse": 1.859927397163119e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8212910890579224,
+            "gradient_norm": 0.0002956393582280725,
+            "step": 500,
+            "terminal_mse": 1.0992262104991823e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8219011425971985,
+            "gradient_norm": 0.00017227575881406665,
+            "step": 550,
+            "terminal_mse": 1.2670771866396535e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 1.91433296095056e-05,
+          "ood_mean_mse": 2.1031424694228917e-05
+        },
+        "iid": {
+          "terminal_mae": 0.002931796247139573,
+          "terminal_mse": 1.3479044355335645e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.003646202152594924,
+          "terminal_mse": 2.1383119019446895e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.0033882195129990578,
+          "terminal_mse": 1.8008007828029804e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.00393130024895072,
+          "terminal_mse": 2.3703147235210054e-05
+        }
+      },
+      "horizon_multiplier": 4,
+      "latent_rank": 8,
+      "learning_rate": 0.003,
+      "method": "replay_reservoir",
+      "method_key": "replay_reservoir:r4",
+      "seed": 701,
+      "sequence_length": 96,
+      "task": "boundary_latent_08_horizon_04x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.8791424036026001,
+        "final_train_mse": 1.2232912922627293e-05,
+        "mean_gradient_cosine": 0.8849710011482239,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 5.644473575055599,
+        "state_bytes_fp32_per_episode": 2300,
+        "state_floats_per_episode": 575,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.8828385472297668,
+            "gradient_norm": 0.0036910884082317352,
+            "step": 1,
+            "terminal_mse": 0.00016904750373214483
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8831475973129272,
+            "gradient_norm": 0.0004856655141338706,
+            "step": 50,
+            "terminal_mse": 2.3468968720408157e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8827120661735535,
+            "gradient_norm": 0.00024589142412878573,
+            "step": 100,
+            "terminal_mse": 1.3090511856717058e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.880412220954895,
+            "gradient_norm": 0.00010705126624088734,
+            "step": 150,
+            "terminal_mse": 1.429055100743426e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8859112858772278,
+            "gradient_norm": 0.00039851220208220184,
+            "step": 200,
+            "terminal_mse": 1.9000019165105186e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8808678388595581,
+            "gradient_norm": 0.00021784205455332994,
+            "step": 250,
+            "terminal_mse": 1.639219408389181e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8819318413734436,
+            "gradient_norm": 0.00036276612081564963,
+            "step": 300,
+            "terminal_mse": 1.4176086551742628e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8852113485336304,
+            "gradient_norm": 0.0007226858288049698,
+            "step": 350,
+            "terminal_mse": 1.9113605958409607e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8845990300178528,
+            "gradient_norm": 0.0005602167220786214,
+            "step": 400,
+            "terminal_mse": 1.3166293683752883e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8833454847335815,
+            "gradient_norm": 0.0005520978011190891,
+            "step": 450,
+            "terminal_mse": 1.788326699170284e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.884345293045044,
+            "gradient_norm": 0.000765170727390796,
+            "step": 500,
+            "terminal_mse": 1.615060682524927e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8791424036026001,
+            "gradient_norm": 0.0003619063936639577,
+            "step": 550,
+            "terminal_mse": 1.2232912922627293e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 4.326457928982563e-05,
+          "ood_mean_mse": 4.659317710320465e-05
+        },
+        "iid": {
+          "terminal_mae": 0.004536367952823639,
+          "terminal_mse": 3.3278785849688575e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.005724873393774033,
+          "terminal_mse": 4.992981121176854e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.004952175542712212,
+          "terminal_mse": 3.770718103623949e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.005765929818153381,
+          "terminal_mse": 5.214253906160593e-05
+        }
+      },
+      "horizon_multiplier": 4,
+      "latent_rank": 8,
+      "learning_rate": 0.003,
+      "method": "multi_timescale",
+      "method_key": "multi_timescale:r4",
+      "seed": 701,
+      "sequence_length": 96,
+      "task": "boundary_latent_08_horizon_04x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.32756534218788147,
+        "final_train_mse": 2.536642932682298e-05,
+        "mean_gradient_cosine": 0.3196354908834804,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 8.084124010056257,
+        "state_bytes_fp32_per_episode": 2304,
+        "state_floats_per_episode": 576,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.32473108172416687,
+            "gradient_norm": 0.0008377376361750066,
+            "step": 1,
+            "terminal_mse": 0.00016904750373214483
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3147023916244507,
+            "gradient_norm": 0.00026417896151542664,
+            "step": 50,
+            "terminal_mse": 5.925479490542784e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3152114152908325,
+            "gradient_norm": 0.0003254699404351413,
+            "step": 100,
+            "terminal_mse": 5.2873157983412966e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.31555458903312683,
+            "gradient_norm": 0.0001791732502169907,
+            "step": 150,
+            "terminal_mse": 2.5867191652650945e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.31954678893089294,
+            "gradient_norm": 0.00018225474923383445,
+            "step": 200,
+            "terminal_mse": 5.3908803238300607e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3223439157009125,
+            "gradient_norm": 0.00024030060740187764,
+            "step": 250,
+            "terminal_mse": 3.35740260197781e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.32001227140426636,
+            "gradient_norm": 0.0001264723832719028,
+            "step": 300,
+            "terminal_mse": 2.5131239453912713e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.32272642850875854,
+            "gradient_norm": 0.0001317980932071805,
+            "step": 350,
+            "terminal_mse": 3.300263051642105e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3189738392829895,
+            "gradient_norm": 0.00034254268393851817,
+            "step": 400,
+            "terminal_mse": 5.87961076234933e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.32486218214035034,
+            "gradient_norm": 0.00020848137501161546,
+            "step": 450,
+            "terminal_mse": 4.209450344205834e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3227689862251282,
+            "gradient_norm": 0.00017016477067954838,
+            "step": 500,
+            "terminal_mse": 4.51197920483537e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.32756534218788147,
+            "gradient_norm": 0.00011136160173919052,
+            "step": 550,
+            "terminal_mse": 2.536642932682298e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 2.9307698696356965e-05,
+          "ood_mean_mse": 3.345073916231437e-05
+        },
+        "iid": {
+          "terminal_mae": 0.003270503133535385,
+          "terminal_mse": 1.6878577298484743e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.005551477428525686,
+          "terminal_mse": 4.466874452191405e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.002946027321740985,
+          "terminal_mse": 1.3670252883457579e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.005467827431857586,
+          "terminal_mse": 4.201322008157149e-05
+        }
+      },
+      "horizon_multiplier": 4,
+      "latent_rank": 8,
+      "learning_rate": 0.003,
+      "method": "full_trace",
+      "method_key": "full_trace",
+      "seed": 809,
+      "sequence_length": 96,
+      "task": "boundary_latent_08_horizon_04x",
+      "trace_rank": 0,
+      "training": {
+        "final_gradient_cosine": 1.0,
+        "final_train_mse": 7.698148692725226e-06,
+        "mean_gradient_cosine": 1.0,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 5.554402690380812,
+        "state_bytes_fp32_per_episode": 6912,
+        "state_floats_per_episode": 1728,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.003176339901983738,
+            "step": 1,
+            "terminal_mse": 0.00015028746565803885
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0001530334266135469,
+            "step": 50,
+            "terminal_mse": 1.7507180018583313e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0002469250757712871,
+            "step": 100,
+            "terminal_mse": 1.230718225997407e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00044616396189667284,
+            "step": 150,
+            "terminal_mse": 1.6632431652396917e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0006682237144559622,
+            "step": 200,
+            "terminal_mse": 1.836591400206089e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00011194664693903178,
+            "step": 250,
+            "terminal_mse": 1.1215586710022762e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0005391605664044619,
+            "step": 300,
+            "terminal_mse": 1.5260775398928672e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0003034365945495665,
+            "step": 350,
+            "terminal_mse": 1.144430734711932e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00017316015146207064,
+            "step": 400,
+            "terminal_mse": 8.204884579754435e-06
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00010702351573854685,
+            "step": 450,
+            "terminal_mse": 9.899221367959399e-06
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0004892717115581036,
+            "step": 500,
+            "terminal_mse": 1.3735118045588024e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00019112564041279256,
+            "step": 550,
+            "terminal_mse": 7.698148692725226e-06
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 2.0289363874326227e-05,
+          "ood_mean_mse": 2.239139818508799e-05
+        },
+        "iid": {
+          "terminal_mae": 0.0029485314153134823,
+          "terminal_mse": 1.3983260942040943e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.004172623157501221,
+          "terminal_mse": 2.7402064006309956e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.0031627630814909935,
+          "terminal_mse": 1.5756206266814843e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.003952779807150364,
+          "terminal_mse": 2.4015924282139167e-05
+        }
+      },
+      "horizon_multiplier": 4,
+      "latent_rank": 8,
+      "learning_rate": 0.003,
+      "method": "lowrank_svd",
+      "method_key": "lowrank_svd:r4",
+      "seed": 809,
+      "sequence_length": 96,
+      "task": "boundary_latent_08_horizon_04x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.8239637017250061,
+        "final_train_mse": 1.2978343875147402e-05,
+        "mean_gradient_cosine": 0.8211726060780612,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 480.4558100514114,
+        "state_bytes_fp32_per_episode": 2352,
+        "state_floats_per_episode": 588,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.8186686038970947,
+            "gradient_norm": 0.0018734358018264174,
+            "step": 1,
+            "terminal_mse": 0.00015028746565803885
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8265969753265381,
+            "gradient_norm": 0.00024408820900134742,
+            "step": 50,
+            "terminal_mse": 1.6595433407928795e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.816291093826294,
+            "gradient_norm": 9.78749303612858e-05,
+            "step": 100,
+            "terminal_mse": 1.2946052265760954e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.822927713394165,
+            "gradient_norm": 0.00041306696948595345,
+            "step": 150,
+            "terminal_mse": 1.9981594959972426e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8171184062957764,
+            "gradient_norm": 0.00044462387450039387,
+            "step": 200,
+            "terminal_mse": 2.0809540728805587e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8207783699035645,
+            "gradient_norm": 0.00017080240650102496,
+            "step": 250,
+            "terminal_mse": 1.3540526197175495e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8242217898368835,
+            "gradient_norm": 0.000349770620232448,
+            "step": 300,
+            "terminal_mse": 1.712185076030437e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8268889784812927,
+            "gradient_norm": 0.0001082943708752282,
+            "step": 350,
+            "terminal_mse": 1.1206779163330793e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8218915462493896,
+            "gradient_norm": 0.00015061517478898168,
+            "step": 400,
+            "terminal_mse": 9.005042556964327e-06
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8154745697975159,
+            "gradient_norm": 0.00032864295644685626,
+            "step": 450,
+            "terminal_mse": 1.3805793059873395e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8233234882354736,
+            "gradient_norm": 8.150161011144519e-05,
+            "step": 500,
+            "terminal_mse": 1.129348311224021e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8239637017250061,
+            "gradient_norm": 0.0004181565309409052,
+            "step": 550,
+            "terminal_mse": 1.2978343875147402e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 2.4641987693030387e-05,
+          "ood_mean_mse": 2.7809428502223454e-05
+        },
+        "iid": {
+          "terminal_mae": 0.003028816543519497,
+          "terminal_mse": 1.5139665265451185e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.004874770995229483,
+          "terminal_mse": 3.575062510208227e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.002956779208034277,
+          "terminal_mse": 1.3834824130753987e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.004773241467773914,
+          "terminal_mse": 3.384283627383411e-05
+        }
+      },
+      "horizon_multiplier": 4,
+      "latent_rank": 8,
+      "learning_rate": 0.003,
+      "method": "replay_reservoir",
+      "method_key": "replay_reservoir:r4",
+      "seed": 809,
+      "sequence_length": 96,
+      "task": "boundary_latent_08_horizon_04x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.8876773118972778,
+        "final_train_mse": 9.842917279456742e-06,
+        "mean_gradient_cosine": 0.8848139357566833,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 5.684567887336016,
+        "state_bytes_fp32_per_episode": 2300,
+        "state_floats_per_episode": 575,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.8862842321395874,
+            "gradient_norm": 0.003200294217094779,
+            "step": 1,
+            "terminal_mse": 0.00015028746565803885
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8857533931732178,
+            "gradient_norm": 0.00028579082572832704,
+            "step": 50,
+            "terminal_mse": 1.8553702830104157e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8835811614990234,
+            "gradient_norm": 0.00022919564798939973,
+            "step": 100,
+            "terminal_mse": 1.4523640857078135e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8864815831184387,
+            "gradient_norm": 0.00046447955537587404,
+            "step": 150,
+            "terminal_mse": 1.7398400814272463e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8855785131454468,
+            "gradient_norm": 0.0007884021033532917,
+            "step": 200,
+            "terminal_mse": 2.2227417503017932e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8873154520988464,
+            "gradient_norm": 0.0001675901876296848,
+            "step": 250,
+            "terminal_mse": 1.3212273188401014e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.889180064201355,
+            "gradient_norm": 0.0006313184858299792,
+            "step": 300,
+            "terminal_mse": 1.746769885357935e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8918988704681396,
+            "gradient_norm": 0.00046314887003973126,
+            "step": 350,
+            "terminal_mse": 1.2818425602745265e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8836120963096619,
+            "gradient_norm": 0.0002992287336383015,
+            "step": 400,
+            "terminal_mse": 1.1311140951875132e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8838109970092773,
+            "gradient_norm": 0.00010101271618623286,
+            "step": 450,
+            "terminal_mse": 1.1180772162333596e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8877803087234497,
+            "gradient_norm": 0.0001563080440973863,
+            "step": 500,
+            "terminal_mse": 1.2094964404241182e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8876773118972778,
+            "gradient_norm": 0.0003062330943066627,
+            "step": 550,
+            "terminal_mse": 9.842917279456742e-06
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 5.006405535823433e-05,
+          "ood_mean_mse": 5.490701247860367e-05
+        },
+        "iid": {
+          "terminal_mae": 0.00471160002052784,
+          "terminal_mse": 3.5535183997126296e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.006497571244835854,
+          "terminal_mse": 6.696647324133664e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.004752356093376875,
+          "terminal_mse": 3.550358087522909e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.006394793279469013,
+          "terminal_mse": 6.225098331924528e-05
+        }
+      },
+      "horizon_multiplier": 4,
+      "latent_rank": 8,
+      "learning_rate": 0.003,
+      "method": "multi_timescale",
+      "method_key": "multi_timescale:r4",
+      "seed": 809,
+      "sequence_length": 96,
+      "task": "boundary_latent_08_horizon_04x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.3276115357875824,
+        "final_train_mse": 2.5431238100281917e-05,
+        "mean_gradient_cosine": 0.31926371628587896,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 7.958525620400906,
+        "state_bytes_fp32_per_episode": 2304,
+        "state_floats_per_episode": 576,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.3193137049674988,
+            "gradient_norm": 0.0007354678818956017,
+            "step": 1,
+            "terminal_mse": 0.00015028746565803885
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3172870874404907,
+            "gradient_norm": 0.00018007295147981495,
+            "step": 50,
+            "terminal_mse": 5.079460970591754e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3162420988082886,
+            "gradient_norm": 0.00017531149205751717,
+            "step": 100,
+            "terminal_mse": 3.665258554974571e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3118058741092682,
+            "gradient_norm": 0.00019397020514588803,
+            "step": 150,
+            "terminal_mse": 4.446501407073811e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.32279542088508606,
+            "gradient_norm": 0.000166009966051206,
+            "step": 200,
+            "terminal_mse": 4.2046536691486835e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3154195547103882,
+            "gradient_norm": 0.00012977256847079843,
+            "step": 250,
+            "terminal_mse": 2.473247513989918e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3200635313987732,
+            "gradient_norm": 0.00017235228733625263,
+            "step": 300,
+            "terminal_mse": 3.0404657081817277e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3120582699775696,
+            "gradient_norm": 0.00012055340630467981,
+            "step": 350,
+            "terminal_mse": 3.217720950488001e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.316925048828125,
+            "gradient_norm": 0.0002418067306280136,
+            "step": 400,
+            "terminal_mse": 3.581401688279584e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3211497366428375,
+            "gradient_norm": 0.00020150374621152878,
+            "step": 450,
+            "terminal_mse": 6.861105794087052e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.33069244027137756,
+            "gradient_norm": 0.00012408991460688412,
+            "step": 500,
+            "terminal_mse": 3.980745532317087e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3276115357875824,
+            "gradient_norm": 0.00013330209185369313,
+            "step": 550,
+            "terminal_mse": 2.5431238100281917e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 1.7392416111761122e-05,
+          "ood_mean_mse": 1.9683777888227876e-05
+        },
+        "iid": {
+          "terminal_mae": 0.0026301026809960604,
+          "terminal_mse": 1.0518330782360863e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.0037459898740053177,
+          "terminal_mse": 2.1570169337792322e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.0031200572848320007,
+          "terminal_mse": 1.5754509149701335e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.0037627145648002625,
+          "terminal_mse": 2.172665517718997e-05
+        }
+      },
+      "horizon_multiplier": 8,
+      "latent_rank": 8,
+      "learning_rate": 0.01,
+      "method": "full_trace",
+      "method_key": "full_trace",
+      "seed": 607,
+      "sequence_length": 192,
+      "task": "boundary_latent_08_horizon_08x",
+      "trace_rank": 0,
+      "training": {
+        "final_gradient_cosine": 1.0,
+        "final_train_mse": 2.2779271603212692e-05,
+        "mean_gradient_cosine": 1.0,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 10.41988991945982,
+        "state_bytes_fp32_per_episode": 6912,
+        "state_floats_per_episode": 1728,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0039640991017222404,
+            "step": 1,
+            "terminal_mse": 0.0001773892145138234
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0005056901136413217,
+            "step": 50,
+            "terminal_mse": 2.887704613385722e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0003716649080161005,
+            "step": 100,
+            "terminal_mse": 1.615281871636398e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00037781891296617687,
+            "step": 150,
+            "terminal_mse": 1.5502673704759218e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00012757776130456477,
+            "step": 200,
+            "terminal_mse": 1.5013223674031906e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0004020633059553802,
+            "step": 250,
+            "terminal_mse": 1.3727233636018354e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0003481953463051468,
+            "step": 300,
+            "terminal_mse": 1.1443760740803555e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0004865005612373352,
+            "step": 350,
+            "terminal_mse": 1.1773880032706074e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0005745035014115274,
+            "step": 400,
+            "terminal_mse": 1.4941508197807707e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 5.067068923381157e-05,
+            "step": 450,
+            "terminal_mse": 1.1679383533191867e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 5.610725929727778e-05,
+            "step": 500,
+            "terminal_mse": 8.877691470843274e-06
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.000930315291043371,
+            "step": 550,
+            "terminal_mse": 2.2779271603212692e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 1.9322290654599783e-05,
+          "ood_mean_mse": 2.1978021929195773e-05
+        },
+        "iid": {
+          "terminal_mae": 0.002735679969191551,
+          "terminal_mse": 1.1355096830811817e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.004049430601298809,
+          "terminal_mse": 2.5620698579587042e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.0030406699515879154,
+          "terminal_mse": 1.4480971003649756e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.004141775891184807,
+          "terminal_mse": 2.5832396204350516e-05
+        }
+      },
+      "horizon_multiplier": 8,
+      "latent_rank": 8,
+      "learning_rate": 0.01,
+      "method": "lowrank_svd",
+      "method_key": "lowrank_svd:r4",
+      "seed": 607,
+      "sequence_length": 192,
+      "task": "boundary_latent_08_horizon_08x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.789938747882843,
+        "final_train_mse": 2.159922405553516e-05,
+        "mean_gradient_cosine": 0.7878150777383284,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 963.821242146194,
+        "state_bytes_fp32_per_episode": 2352,
+        "state_floats_per_episode": 588,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.7859963178634644,
+            "gradient_norm": 0.002252204343676567,
+            "step": 1,
+            "terminal_mse": 0.0001773892145138234
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7857780456542969,
+            "gradient_norm": 0.00041507466812618077,
+            "step": 50,
+            "terminal_mse": 3.3953321690205485e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.787300169467926,
+            "gradient_norm": 0.00013837906590197235,
+            "step": 100,
+            "terminal_mse": 1.1492145858937874e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7891910076141357,
+            "gradient_norm": 0.00021718208154197782,
+            "step": 150,
+            "terminal_mse": 1.3840480278304312e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.788149356842041,
+            "gradient_norm": 0.00012232664448674768,
+            "step": 200,
+            "terminal_mse": 1.3642427802551538e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7877107858657837,
+            "gradient_norm": 0.0002111972717102617,
+            "step": 250,
+            "terminal_mse": 1.4609842764912173e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7858137488365173,
+            "gradient_norm": 0.00018590272520668805,
+            "step": 300,
+            "terminal_mse": 1.1585392712731846e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.788981556892395,
+            "gradient_norm": 0.0002982567821163684,
+            "step": 350,
+            "terminal_mse": 1.3729051715927199e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.79325270652771,
+            "gradient_norm": 0.00032553233904764056,
+            "step": 400,
+            "terminal_mse": 1.6004627468646504e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7898109555244446,
+            "gradient_norm": 6.279901572270319e-05,
+            "step": 450,
+            "terminal_mse": 1.2001612958556507e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7869068384170532,
+            "gradient_norm": 9.116311412071809e-05,
+            "step": 500,
+            "terminal_mse": 1.0324564755137544e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.789938747882843,
+            "gradient_norm": 0.00048426317516714334,
+            "step": 550,
+            "terminal_mse": 2.159922405553516e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 1.923151785376831e-05,
+          "ood_mean_mse": 2.1573862492611322e-05
+        },
+        "iid": {
+          "terminal_mae": 0.0028030634857714176,
+          "terminal_mse": 1.2204483937239274e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.004038522019982338,
+          "terminal_mse": 2.4686507458682172e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.00322504504583776,
+          "terminal_mse": 1.6349244106095284e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.003880640957504511,
+          "terminal_mse": 2.3685835913056508e-05
+        }
+      },
+      "horizon_multiplier": 8,
+      "latent_rank": 8,
+      "learning_rate": 0.01,
+      "method": "replay_reservoir",
+      "method_key": "replay_reservoir:r4",
+      "seed": 607,
+      "sequence_length": 192,
+      "task": "boundary_latent_08_horizon_08x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.865658164024353,
+        "final_train_mse": 1.735801197355613e-05,
+        "mean_gradient_cosine": 0.8625474572181702,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 10.771201375871897,
+        "state_bytes_fp32_per_episode": 2300,
+        "state_floats_per_episode": 575,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.8702877759933472,
+            "gradient_norm": 0.003938676323741674,
+            "step": 1,
+            "terminal_mse": 0.0001773892145138234
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.860300600528717,
+            "gradient_norm": 0.0004986894782632589,
+            "step": 50,
+            "terminal_mse": 3.699961234815419e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.864479660987854,
+            "gradient_norm": 0.00048228984815068543,
+            "step": 100,
+            "terminal_mse": 1.940440051839687e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8644580841064453,
+            "gradient_norm": 0.000399655953515321,
+            "step": 150,
+            "terminal_mse": 1.6409798263339326e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8629199266433716,
+            "gradient_norm": 7.916212052805349e-05,
+            "step": 200,
+            "terminal_mse": 1.596668516867794e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8600469827651978,
+            "gradient_norm": 0.00043231435120105743,
+            "step": 250,
+            "terminal_mse": 1.5040723155834712e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8631230592727661,
+            "gradient_norm": 0.00029493591864593327,
+            "step": 300,
+            "terminal_mse": 1.1730367987183854e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8652531504631042,
+            "gradient_norm": 0.0003275263588875532,
+            "step": 350,
+            "terminal_mse": 1.0180992831010371e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8601547479629517,
+            "gradient_norm": 0.0004457394825294614,
+            "step": 400,
+            "terminal_mse": 1.4319070032797754e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8662998676300049,
+            "gradient_norm": 8.791508298600093e-05,
+            "step": 450,
+            "terminal_mse": 1.3361790479393676e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8627112507820129,
+            "gradient_norm": 0.00012279815564397722,
+            "step": 500,
+            "terminal_mse": 9.695027983980253e-06
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.865658164024353,
+            "gradient_norm": 0.0007186512812040746,
+            "step": 550,
+            "terminal_mse": 1.735801197355613e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 5.8328721934231e-05,
+          "ood_mean_mse": 6.539798778248951e-05
+        },
+        "iid": {
+          "terminal_mae": 0.004967475309967995,
+          "terminal_mse": 3.712092438945547e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.007007379084825516,
+          "terminal_mse": 7.586039282614365e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.005102355964481831,
+          "terminal_mse": 3.922601172234863e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.007425336167216301,
+          "terminal_mse": 8.110755879897624e-05
+        }
+      },
+      "horizon_multiplier": 8,
+      "latent_rank": 8,
+      "learning_rate": 0.003,
+      "method": "multi_timescale",
+      "method_key": "multi_timescale:r4",
+      "seed": 607,
+      "sequence_length": 192,
+      "task": "boundary_latent_08_horizon_08x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.3190109133720398,
+        "final_train_mse": 2.885622416215483e-05,
+        "mean_gradient_cosine": 0.3096066496047107,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 15.465445477515459,
+        "state_bytes_fp32_per_episode": 2304,
+        "state_floats_per_episode": 576,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.303535521030426,
+            "gradient_norm": 0.000751298270188272,
+            "step": 1,
+            "terminal_mse": 0.0001773892145138234
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3061131536960602,
+            "gradient_norm": 0.00015037339471746236,
+            "step": 50,
+            "terminal_mse": 3.569457840058021e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3063431680202484,
+            "gradient_norm": 0.00016455230070278049,
+            "step": 100,
+            "terminal_mse": 3.402529546292499e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.31015363335609436,
+            "gradient_norm": 0.0003524094936437905,
+            "step": 150,
+            "terminal_mse": 4.434353832039051e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3142620325088501,
+            "gradient_norm": 0.00026744429487735033,
+            "step": 200,
+            "terminal_mse": 5.25076684425585e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.30388525128364563,
+            "gradient_norm": 0.0001683296577539295,
+            "step": 250,
+            "terminal_mse": 3.921627649106085e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.30731332302093506,
+            "gradient_norm": 0.00024848623434081674,
+            "step": 300,
+            "terminal_mse": 3.9427137380698696e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.30535978078842163,
+            "gradient_norm": 0.00016832959954626858,
+            "step": 350,
+            "terminal_mse": 2.5541987270116806e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3228205144405365,
+            "gradient_norm": 0.0002234217245131731,
+            "step": 400,
+            "terminal_mse": 2.6101119146915153e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.30952173471450806,
+            "gradient_norm": 0.00014156433462630957,
+            "step": 450,
+            "terminal_mse": 3.9929076592670754e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3134782016277313,
+            "gradient_norm": 0.00013420054165180773,
+            "step": 500,
+            "terminal_mse": 3.811908754869364e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3190109133720398,
+            "gradient_norm": 0.0001367114164168015,
+            "step": 550,
+            "terminal_mse": 2.885622416215483e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 1.5851761872909265e-05,
+          "ood_mean_mse": 1.7488843999065768e-05
+        },
+        "iid": {
+          "terminal_mae": 0.0026148147881031036,
+          "terminal_mse": 1.0940515494439751e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.003626165445894003,
+          "terminal_mse": 1.97238041437231e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.002929074689745903,
+          "terminal_mse": 1.3174840205465443e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.0036010881885886192,
+          "terminal_mse": 1.9567887648008764e-05
+        }
+      },
+      "horizon_multiplier": 8,
+      "latent_rank": 8,
+      "learning_rate": 0.01,
+      "method": "full_trace",
+      "method_key": "full_trace",
+      "seed": 701,
+      "sequence_length": 192,
+      "task": "boundary_latent_08_horizon_08x",
+      "trace_rank": 0,
+      "training": {
+        "final_gradient_cosine": 1.0,
+        "final_train_mse": 1.0606201612972654e-05,
+        "mean_gradient_cosine": 1.0,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 10.29347125813365,
+        "state_bytes_fp32_per_episode": 6912,
+        "state_floats_per_episode": 1728,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0031423214823007584,
+            "step": 1,
+            "terminal_mse": 0.00012213671288918704
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.001442269771359861,
+            "step": 50,
+            "terminal_mse": 5.217392754275352e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 9.38747834879905e-05,
+            "step": 100,
+            "terminal_mse": 1.3833935554430354e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0002953923540189862,
+            "step": 150,
+            "terminal_mse": 1.3052278518443927e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00011003150575561449,
+            "step": 200,
+            "terminal_mse": 8.871315003489144e-06
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 3.8519785448443145e-05,
+            "step": 250,
+            "terminal_mse": 1.4482564438367262e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 3.168900730088353e-05,
+            "step": 300,
+            "terminal_mse": 1.1468237062217668e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0001923938689287752,
+            "step": 350,
+            "terminal_mse": 1.0627516530803405e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 6.436957482947037e-05,
+            "step": 400,
+            "terminal_mse": 8.6712771008024e-06
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 9.88481187960133e-05,
+            "step": 450,
+            "terminal_mse": 1.127531322708819e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00020610663341358304,
+            "step": 500,
+            "terminal_mse": 1.2527179933385924e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0002343324013054371,
+            "step": 550,
+            "terminal_mse": 1.0606201612972654e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 1.6264519217656925e-05,
+          "ood_mean_mse": 1.783135727843425e-05
+        },
+        "iid": {
+          "terminal_mae": 0.0027198533061891794,
+          "terminal_mse": 1.1564005035324953e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.0036576504353433847,
+          "terminal_mse": 2.0135634258622304e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.003007924184203148,
+          "terminal_mse": 1.3862447303836234e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.0035611430648714304,
+          "terminal_mse": 1.949599027284421e-05
+        }
+      },
+      "horizon_multiplier": 8,
+      "latent_rank": 8,
+      "learning_rate": 0.01,
+      "method": "lowrank_svd",
+      "method_key": "lowrank_svd:r4",
+      "seed": 701,
+      "sequence_length": 192,
+      "task": "boundary_latent_08_horizon_08x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.7848131656646729,
+        "final_train_mse": 1.0945112990157213e-05,
+        "mean_gradient_cosine": 0.7870681152560494,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 969.3367865458131,
+        "state_bytes_fp32_per_episode": 2352,
+        "state_floats_per_episode": 588,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.78078293800354,
+            "gradient_norm": 0.0017764202784746885,
+            "step": 1,
+            "terminal_mse": 0.00012213671288918704
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7863912582397461,
+            "gradient_norm": 0.00090654386440292,
+            "step": 50,
+            "terminal_mse": 5.329259147401899e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7879437804222107,
+            "gradient_norm": 8.552698272978887e-05,
+            "step": 100,
+            "terminal_mse": 1.1702564734150656e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7849127054214478,
+            "gradient_norm": 6.33798772469163e-05,
+            "step": 150,
+            "terminal_mse": 1.09919938040548e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7887660264968872,
+            "gradient_norm": 9.73237183643505e-05,
+            "step": 200,
+            "terminal_mse": 9.078506991500035e-06
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7901917695999146,
+            "gradient_norm": 8.813465683488175e-05,
+            "step": 250,
+            "terminal_mse": 1.5287636415450834e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7899338006973267,
+            "gradient_norm": 7.840331818442792e-05,
+            "step": 300,
+            "terminal_mse": 1.1636288036243059e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.784677267074585,
+            "gradient_norm": 0.00018013548105955124,
+            "step": 350,
+            "terminal_mse": 1.260254703083774e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7843008041381836,
+            "gradient_norm": 5.966492244624533e-05,
+            "step": 400,
+            "terminal_mse": 9.054940164787695e-06
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7885794043540955,
+            "gradient_norm": 8.998749399324879e-05,
+            "step": 450,
+            "terminal_mse": 1.2106281246815342e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7847263813018799,
+            "gradient_norm": 0.00013734491949435323,
+            "step": 500,
+            "terminal_mse": 1.3688097169506364e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7848131656646729,
+            "gradient_norm": 0.00011066168372053653,
+            "step": 550,
+            "terminal_mse": 1.0945112990157213e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 1.7709427993395366e-05,
+          "ood_mean_mse": 1.881752965952425e-05
+        },
+        "iid": {
+          "terminal_mae": 0.0030493326485157013,
+          "terminal_mse": 1.4385122995008714e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.0034936293959617615,
+          "terminal_mse": 1.8895061657531187e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.003517521545290947,
+          "terminal_mse": 1.814474853745196e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.0035100108943879604,
+          "terminal_mse": 1.94127787835896e-05
+        }
+      },
+      "horizon_multiplier": 8,
+      "latent_rank": 8,
+      "learning_rate": 0.01,
+      "method": "replay_reservoir",
+      "method_key": "replay_reservoir:r4",
+      "seed": 701,
+      "sequence_length": 192,
+      "task": "boundary_latent_08_horizon_08x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.8583095669746399,
+        "final_train_mse": 1.1935842849197797e-05,
+        "mean_gradient_cosine": 0.8623599415475672,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 10.427268970757723,
+        "state_bytes_fp32_per_episode": 2300,
+        "state_floats_per_episode": 575,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.8688439130783081,
+            "gradient_norm": 0.003120996756479144,
+            "step": 1,
+            "terminal_mse": 0.00012213671288918704
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8605392575263977,
+            "gradient_norm": 0.0015949330991134048,
+            "step": 50,
+            "terminal_mse": 5.8817764511331916e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8595354557037354,
+            "gradient_norm": 0.00024004364968277514,
+            "step": 100,
+            "terminal_mse": 1.6908536053961143e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8634935021400452,
+            "gradient_norm": 0.0004170179890934378,
+            "step": 150,
+            "terminal_mse": 1.4670600648969412e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.857446014881134,
+            "gradient_norm": 0.00013222788402345031,
+            "step": 200,
+            "terminal_mse": 9.154297913482878e-06
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8654978275299072,
+            "gradient_norm": 0.00013008750102017075,
+            "step": 250,
+            "terminal_mse": 1.5512336176470853e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8593786954879761,
+            "gradient_norm": 7.627992454217747e-05,
+            "step": 300,
+            "terminal_mse": 1.2654222700803075e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8578655123710632,
+            "gradient_norm": 0.00010217527596978471,
+            "step": 350,
+            "terminal_mse": 1.1109231309092138e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8582735657691956,
+            "gradient_norm": 0.00012339091335888952,
+            "step": 400,
+            "terminal_mse": 1.0539508366491646e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8635883927345276,
+            "gradient_norm": 0.00015673878078814596,
+            "step": 450,
+            "terminal_mse": 1.152279492089292e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8606745600700378,
+            "gradient_norm": 0.0005278692115098238,
+            "step": 500,
+            "terminal_mse": 1.6062520444393158e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8583095669746399,
+            "gradient_norm": 0.000165051082149148,
+            "step": 550,
+            "terminal_mse": 1.1935842849197797e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 5.2913724175596144e-05,
+          "ood_mean_mse": 5.639397810834149e-05
+        },
+        "iid": {
+          "terminal_mae": 0.005154326558113098,
+          "terminal_mse": 4.247296237736009e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.006632072851061821,
+          "terminal_mse": 6.957665755180642e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.004853153135627508,
+          "terminal_mse": 3.890568041242659e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.0063806623220443726,
+          "terminal_mse": 6.0699596360791475e-05
+        }
+      },
+      "horizon_multiplier": 8,
+      "latent_rank": 8,
+      "learning_rate": 0.003,
+      "method": "multi_timescale",
+      "method_key": "multi_timescale:r4",
+      "seed": 701,
+      "sequence_length": 192,
+      "task": "boundary_latent_08_horizon_08x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.32355162501335144,
+        "final_train_mse": 4.942097075399943e-05,
+        "mean_gradient_cosine": 0.30923079550266264,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 15.435758981853724,
+        "state_bytes_fp32_per_episode": 2304,
+        "state_floats_per_episode": 576,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.29919755458831787,
+            "gradient_norm": 0.000648820074275136,
+            "step": 1,
+            "terminal_mse": 0.00012213671288918704
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.30232366919517517,
+            "gradient_norm": 0.00015239744971040636,
+            "step": 50,
+            "terminal_mse": 4.1669565689517185e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3065986633300781,
+            "gradient_norm": 0.0001840442419052124,
+            "step": 100,
+            "terminal_mse": 3.933504922315478e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.31098780035972595,
+            "gradient_norm": 0.00016675253573339432,
+            "step": 150,
+            "terminal_mse": 3.731437027454376e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.30256491899490356,
+            "gradient_norm": 0.00016840072930790484,
+            "step": 200,
+            "terminal_mse": 3.4011012758128345e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3079337775707245,
+            "gradient_norm": 0.00023906116257421672,
+            "step": 250,
+            "terminal_mse": 4.217503737891093e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3047493100166321,
+            "gradient_norm": 0.000124964804854244,
+            "step": 300,
+            "terminal_mse": 2.9357444873312488e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.31504470109939575,
+            "gradient_norm": 0.00011456770153017715,
+            "step": 350,
+            "terminal_mse": 2.581531589385122e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.30547651648521423,
+            "gradient_norm": 0.0001289366337005049,
+            "step": 400,
+            "terminal_mse": 2.984451930387877e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.31264954805374146,
+            "gradient_norm": 0.00017328969261143357,
+            "step": 450,
+            "terminal_mse": 4.519104913924821e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.31296777725219727,
+            "gradient_norm": 0.0001878122566267848,
+            "step": 500,
+            "terminal_mse": 4.34965368185658e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.32355162501335144,
+            "gradient_norm": 0.0002515063970349729,
+            "step": 550,
+            "terminal_mse": 4.942097075399943e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 1.8362090941081988e-05,
+          "ood_mean_mse": 1.893182403970665e-05
+        },
+        "iid": {
+          "terminal_mae": 0.003353722859174013,
+          "terminal_mse": 1.6652891645208e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.0035000082571059465,
+          "terminal_mse": 1.9341581719345413e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.003989756107330322,
+          "terminal_mse": 2.408755972282961e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.0029209572821855545,
+          "terminal_mse": 1.3366330676944926e-05
+        }
+      },
+      "horizon_multiplier": 8,
+      "latent_rank": 8,
+      "learning_rate": 0.01,
+      "method": "full_trace",
+      "method_key": "full_trace",
+      "seed": 809,
+      "sequence_length": 192,
+      "task": "boundary_latent_08_horizon_08x",
+      "trace_rank": 0,
+      "training": {
+        "final_gradient_cosine": 1.0,
+        "final_train_mse": 2.064932050416246e-05,
+        "mean_gradient_cosine": 1.0,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 10.323075201362371,
+        "state_bytes_fp32_per_episode": 6912,
+        "state_floats_per_episode": 1728,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0035383759532123804,
+            "step": 1,
+            "terminal_mse": 0.00014749995898455381
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0018223329680040479,
+            "step": 50,
+            "terminal_mse": 6.131169357104227e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 3.921562893083319e-05,
+            "step": 100,
+            "terminal_mse": 1.4607840967073571e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0001703447924228385,
+            "step": 150,
+            "terminal_mse": 1.1820040526799858e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0006185301463119686,
+            "step": 200,
+            "terminal_mse": 1.777852412487846e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0006232019513845444,
+            "step": 250,
+            "terminal_mse": 1.6123236491694115e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00015731436724308878,
+            "step": 300,
+            "terminal_mse": 1.234602041222388e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 4.003317735623568e-05,
+            "step": 350,
+            "terminal_mse": 1.2291910024941899e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 9.07075809664093e-05,
+            "step": 400,
+            "terminal_mse": 1.282323501072824e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0003195229219272733,
+            "step": 450,
+            "terminal_mse": 1.1947455277550034e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.00023766457161400467,
+            "step": 500,
+            "terminal_mse": 1.1167403499712236e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 1.0,
+            "gradient_norm": 0.0007783151813782752,
+            "step": 550,
+            "terminal_mse": 2.064932050416246e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 1.7609027736398275e-05,
+          "ood_mean_mse": 1.830630480981199e-05
+        },
+        "iid": {
+          "terminal_mae": 0.0031946843955665827,
+          "terminal_mse": 1.5517196516157128e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.003456194419413805,
+          "terminal_mse": 1.892846921691671e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.0036745406687259674,
+          "terminal_mse": 2.124084858223796e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.003032050095498562,
+          "terminal_mse": 1.4749596630281303e-05
+        }
+      },
+      "horizon_multiplier": 8,
+      "latent_rank": 8,
+      "learning_rate": 0.01,
+      "method": "lowrank_svd",
+      "method_key": "lowrank_svd:r4",
+      "seed": 809,
+      "sequence_length": 192,
+      "task": "boundary_latent_08_horizon_08x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.7831308245658875,
+        "final_train_mse": 2.366805711062625e-05,
+        "mean_gradient_cosine": 0.7879395048184828,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 965.9577423036098,
+        "state_bytes_fp32_per_episode": 2352,
+        "state_floats_per_episode": 588,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.7857958078384399,
+            "gradient_norm": 0.001992311794310808,
+            "step": 1,
+            "terminal_mse": 0.00014749995898455381
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7836720943450928,
+            "gradient_norm": 0.0010540466755628586,
+            "step": 50,
+            "terminal_mse": 6.113096605986357e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7854888439178467,
+            "gradient_norm": 7.576276402687654e-05,
+            "step": 100,
+            "terminal_mse": 1.1755545529013034e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7877659797668457,
+            "gradient_norm": 0.00012760986282955855,
+            "step": 150,
+            "terminal_mse": 1.2438837075023912e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7857406139373779,
+            "gradient_norm": 0.00033525528851896524,
+            "step": 200,
+            "terminal_mse": 1.8103881302522495e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7899706363677979,
+            "gradient_norm": 0.0004026788519695401,
+            "step": 250,
+            "terminal_mse": 1.7784390365704894e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7917012572288513,
+            "gradient_norm": 5.9949215938104317e-05,
+            "step": 300,
+            "terminal_mse": 1.2250160580151714e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7859668731689453,
+            "gradient_norm": 6.709188892273232e-05,
+            "step": 350,
+            "terminal_mse": 1.1888938388437964e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7886828184127808,
+            "gradient_norm": 0.00010081267828354612,
+            "step": 400,
+            "terminal_mse": 1.3017197488807142e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7866580486297607,
+            "gradient_norm": 0.00015427064499817789,
+            "step": 450,
+            "terminal_mse": 1.2569260434247553e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7935102581977844,
+            "gradient_norm": 7.591618486912921e-05,
+            "step": 500,
+            "terminal_mse": 1.0889772966038436e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.7831308245658875,
+            "gradient_norm": 0.0005016191862523556,
+            "step": 550,
+            "terminal_mse": 2.366805711062625e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 2.182690468544024e-05,
+          "ood_mean_mse": 2.248104343986294e-05
+        },
+        "iid": {
+          "terminal_mae": 0.003660688642412424,
+          "terminal_mse": 1.9864488422172144e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.003827003762125969,
+          "terminal_mse": 2.307599970663432e-05
+        },
+        "noise_shift": {
+          "terminal_mae": 0.004259493201971054,
+          "terminal_mse": 2.7181704354006797e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.0033050919882953167,
+          "terminal_mse": 1.71854262589477e-05
+        }
+      },
+      "horizon_multiplier": 8,
+      "latent_rank": 8,
+      "learning_rate": 0.01,
+      "method": "replay_reservoir",
+      "method_key": "replay_reservoir:r4",
+      "seed": 809,
+      "sequence_length": 192,
+      "task": "boundary_latent_08_horizon_08x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.8604643940925598,
+        "final_train_mse": 2.2056208763387986e-05,
+        "mean_gradient_cosine": 0.8623524389483712,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 10.451046213507652,
+        "state_bytes_fp32_per_episode": 2300,
+        "state_floats_per_episode": 575,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.8615851402282715,
+            "gradient_norm": 0.0035719196312129498,
+            "step": 1,
+            "terminal_mse": 0.00014749995898455381
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.870283842086792,
+            "gradient_norm": 0.0018095038831233978,
+            "step": 50,
+            "terminal_mse": 7.150645251385868e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8642398715019226,
+            "gradient_norm": 0.00010832399857463315,
+            "step": 100,
+            "terminal_mse": 2.0020797819597647e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8636964559555054,
+            "gradient_norm": 0.00012223496742080897,
+            "step": 150,
+            "terminal_mse": 1.4099448890192434e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8590577244758606,
+            "gradient_norm": 0.0006284104310907423,
+            "step": 200,
+            "terminal_mse": 1.894889101095032e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8676327466964722,
+            "gradient_norm": 0.0007356464629992843,
+            "step": 250,
+            "terminal_mse": 1.903845986817032e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.858488917350769,
+            "gradient_norm": 0.0001355230197077617,
+            "step": 300,
+            "terminal_mse": 1.297161725233309e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8604598045349121,
+            "gradient_norm": 8.295648876810446e-05,
+            "step": 350,
+            "terminal_mse": 1.2693943062913604e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.861054003238678,
+            "gradient_norm": 0.00029562515555880964,
+            "step": 400,
+            "terminal_mse": 1.5584526408929378e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8618834018707275,
+            "gradient_norm": 0.00029088428709656,
+            "step": 450,
+            "terminal_mse": 1.3105154721415602e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8602253198623657,
+            "gradient_norm": 0.00028846494387835264,
+            "step": 500,
+            "terminal_mse": 1.4574019587598741e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.8604643940925598,
+            "gradient_norm": 0.0008761919452808797,
+            "step": 550,
+            "terminal_mse": 2.2056208763387986e-05
+          }
+        ]
+      }
+    },
+    {
+      "evaluation": {
+        "aggregate": {
+          "mean_mse": 0.00010049872253148351,
+          "ood_mean_mse": 0.00011347489392695327
+        },
+        "iid": {
+          "terminal_mae": 0.006364659406244755,
+          "terminal_mse": 6.15702083450742e-05
+        },
+        "joint_shift": {
+          "terminal_mae": 0.009768561460077763,
+          "terminal_mse": 0.00014507482410408556
+        },
+        "noise_shift": {
+          "terminal_mae": 0.006627681665122509,
+          "terminal_mse": 6.874362588860095e-05
+        },
+        "scale_shift": {
+          "terminal_mae": 0.00911351665854454,
+          "terminal_mse": 0.00012660623178817332
+        }
+      },
+      "horizon_multiplier": 8,
+      "latent_rank": 8,
+      "learning_rate": 0.003,
+      "method": "multi_timescale",
+      "method_key": "multi_timescale:r4",
+      "seed": 809,
+      "sequence_length": 192,
+      "task": "boundary_latent_08_horizon_08x",
+      "trace_rank": 4,
+      "training": {
+        "final_gradient_cosine": 0.31523534655570984,
+        "final_train_mse": 6.666764238616452e-05,
+        "mean_gradient_cosine": 0.31080748942765324,
+        "optimizer_steps": 550,
+        "parameters": 1728,
+        "runtime_seconds": 15.292282313108444,
+        "state_bytes_fp32_per_episode": 2304,
+        "state_floats_per_episode": 576,
+        "trajectory": [
+          {
+            "gradient_cosine_to_full_trace": 0.30869853496551514,
+            "gradient_norm": 0.0007611976470798254,
+            "step": 1,
+            "terminal_mse": 0.00014749995898455381
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.31028592586517334,
+            "gradient_norm": 0.00018664041999727488,
+            "step": 50,
+            "terminal_mse": 5.0384842325001955e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.31051528453826904,
+            "gradient_norm": 0.00019880574836861342,
+            "step": 100,
+            "terminal_mse": 5.108127515995875e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3201301693916321,
+            "gradient_norm": 0.0001266945619136095,
+            "step": 150,
+            "terminal_mse": 2.637504439917393e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3138660788536072,
+            "gradient_norm": 0.0003167139075230807,
+            "step": 200,
+            "terminal_mse": 5.657605652231723e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.32486552000045776,
+            "gradient_norm": 0.00024021822900976986,
+            "step": 250,
+            "terminal_mse": 3.609597479226068e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.312973290681839,
+            "gradient_norm": 0.00031920537003315985,
+            "step": 300,
+            "terminal_mse": 4.325588088249788e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.315743088722229,
+            "gradient_norm": 0.00020300981123000383,
+            "step": 350,
+            "terminal_mse": 3.516995275276713e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3105829358100891,
+            "gradient_norm": 0.00011514010111568496,
+            "step": 400,
+            "terminal_mse": 2.6760262699099258e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.30580949783325195,
+            "gradient_norm": 0.000196218621567823,
+            "step": 450,
+            "terminal_mse": 4.342350075603463e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.3168743848800659,
+            "gradient_norm": 0.00016050031990744174,
+            "step": 500,
+            "terminal_mse": 3.6929952329955995e-05
+          },
+          {
+            "gradient_cosine_to_full_trace": 0.31523534655570984,
+            "gradient_norm": 0.00020316791778896004,
+            "step": 550,
+            "terminal_mse": 6.666764238616452e-05
+          }
+        ]
+      }
+    }
+  ],
+  "selected_trace_rank": 4,
+  "specific_interrogation": "Raise the task's true gradient rank to eight and ask whether the selected compressed trace degrades gradually instead of failing unpredictably.",
+  "stage": "three-seed latent-rank-eight boundary",
+  "version": "2.0"
+}

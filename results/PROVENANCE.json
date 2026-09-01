@@ -1,0 +1,37 @@
+{
+  "project": "Low-Rank Eligibility Traces for Delayed Credit Assignment",
+  "release_version": "0.1.0",
+  "source_package": {
+    "filename": "adaptive-memory-platform-n08-o10-stacked-v1.1.zip",
+    "size_bytes": 778525,
+    "sha256": "9a00e7a56a51c14192b5a2332ba8374230175fb81508e86e7f8ba8ce9c5ba28a",
+    "role": "Exact source package used for the final stacked v1.1 run"
+  },
+  "raw_result_archives": [
+    {
+      "filename": "n08_pareto_v20_results.zip",
+      "size_bytes": 236008,
+      "sha256": "76cc56313afd4035e0de404e2368438fb90a8df4b3ea187f314ad17a77eb787d",
+      "included_summary_directory": "results/n08_v2"
+    },
+    {
+      "filename": "o10_horizon_v20_results.zip",
+      "size_bytes": 25341402,
+      "sha256": "588d3697ced7f9124cec00a5f4c7bf00c67f96d94e3e003c06c1ba5c2e5cec77",
+      "included_summary_directory": "results/o10_v2"
+    },
+    {
+      "filename": "n08_o10_stacked_v10_results.zip",
+      "size_bytes": 81583459,
+      "sha256": "ff5391547a6411ef98ae7c3b344a05a2d07f16aa4e87b9a8ee0577ddaad380e4",
+      "included_summary_directory": null,
+      "role": "Invalid apparatus run retained for diagnosis only"
+    },
+    {
+      "filename": "n08_o10_stacked_v11_results.zip",
+      "size_bytes": 97216214,
+      "sha256": "17d5ffac380b1de1784d96f841cd77e1109d673bf71920bc6d3805d57573c9a8",
+      "included_summary_directory": "results/stacked_v1.1"
+    }
+  ]
+}

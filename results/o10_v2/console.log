@@ -1,0 +1,12 @@
+{
+  "decision": "stop_o10_v2_after_decisive_actual_horizon_test_move_to_n10",
+  "primary_passed": false,
+  "rank_twelve_rescue_ran": false,
+  "rank_twelve_rescue_passed": false,
+  "long_horizon_extension_ran": true,
+  "long_horizon_extension_passed": false,
+  "selected_trace_rank": 8,
+  "layerwise_specificity_established": false,
+  "gate_passed": false,
+  "runtime_seconds": 58183.04060104489
+}

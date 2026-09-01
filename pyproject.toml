@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "low-rank-eligibility-traces"
+version = "0.1.0"
+description = "Reference implementation and frozen evidence for compressed eligibility traces in delayed credit assignment"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Michael R. Doane"},
+]
+keywords = [
+  "eligibility traces",
+  "delayed credit assignment",
+  "low-rank approximation",
+  "reinforcement learning",
+  "memory compression",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.26",
+  "torch>=2.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.urls]
+Homepage = "https://github.com/MRDOANE/low-rank-eligibility-traces"
+Repository = "https://github.com/MRDOANE/low-rank-eligibility-traces"
+Issues = "https://github.com/MRDOANE/low-rank-eligibility-traces/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+# Preserve the exact experimentally executed source and tests. New repository
+# infrastructure remains subject to the full lint profile.
+"src/adaptive_memory/*.py" = ["E501", "F401", "F841", "I001"]
+"tests/*.py" = ["F401", "I001"]

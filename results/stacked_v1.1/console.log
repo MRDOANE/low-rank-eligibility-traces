@@ -1,0 +1,156 @@
+torch: 2.8.0+cu128
+CUDA available: True
+GPU: NVIDIA RTX 6000 Ada Generation
+GPU memory GiB: 47.37
+test_frozen_premise_passes (tests.test_o10_tasks.O10TaskTests.test_frozen_premise_passes) ... ok
+test_layerwise_sketch_has_valid_gradient_direction (tests.test_o10_tasks.O10TaskTests.test_layerwise_sketch_has_valid_gradient_direction) ... ok
+test_manual_traces_match_finite_differences (tests.test_o10_tasks.O10TaskTests.test_manual_traces_match_finite_differences) ... ok
+test_sampling_is_reproducible_and_only_terminal_target_is_returned (tests.test_o10_tasks.O10TaskTests.test_sampling_is_reproducible_and_only_terminal_target_is_returned) ... ok
+test_sketch_and_replay_state_accounting_is_frozen (tests.test_o10_tasks.O10TaskTests.test_sketch_and_replay_state_accounting_is_frozen) ... ok
+test_all_matched_methods_receive_the_same_allocated_state (tests.test_o10_layerwise.O10LayerwiseTests.test_all_matched_methods_receive_the_same_allocated_state) ... ok
+test_permuting_layers_changes_the_candidate_update (tests.test_o10_layerwise.O10LayerwiseTests.test_permuting_layers_changes_the_candidate_update) ... ok
+test_trace_outputs_have_exact_layerwise_shape (tests.test_o10_layerwise.O10LayerwiseTests.test_trace_outputs_have_exact_layerwise_shape) ... ok
+test_clear_failure_is_decisive (tests.test_o10_horizon_experiment.O10HorizonExperimentTests.test_clear_failure_is_decisive) ... ok
+test_global_control_spends_no_more_than_candidate (tests.test_o10_horizon_experiment.O10HorizonExperimentTests.test_global_control_spends_no_more_than_candidate) ... ok
+test_paired_horizons_share_teacher_not_samples (tests.test_o10_horizon_experiment.O10HorizonExperimentTests.test_paired_horizons_share_teacher_not_samples) ... ok
+test_positive_fixture_passes_and_establishes_specificity (tests.test_o10_horizon_experiment.O10HorizonExperimentTests.test_positive_fixture_passes_and_establishes_specificity) ... ok
+test_reference_premise_passes (tests.test_o10_horizon_experiment.O10HorizonExperimentTests.test_reference_premise_passes) ... ok
+test_every_primary_method_runs_one_step (tests.test_o10_horizon_experiment.O10HorizonTorchTests.test_every_primary_method_runs_one_step) ... ok
+test_designed_rank_boundary_reduces_top_two_spectral_coverage (tests.test_n08_tasks.N08TaskTests.test_designed_rank_boundary_reduces_top_two_spectral_coverage) ... ok
+test_rank_two_state_is_matched_and_much_smaller_than_full_trace (tests.test_n08_tasks.N08TaskTests.test_rank_two_state_is_matched_and_much_smaller_than_full_trace) ... ok
+test_reference_premise_passes (tests.test_n08_tasks.N08TaskTests.test_reference_premise_passes) ... ok
+test_reference_trace_is_average_of_per_event_rank_one_factors (tests.test_n08_tasks.N08TaskTests.test_reference_trace_is_average_of_per_event_rank_one_factors) ... ok
+test_sampling_is_reproducible_and_target_is_terminal_aggregate (tests.test_n08_tasks.N08TaskTests.test_sampling_is_reproducible_and_target_is_terminal_aggregate) ... ok
+test_every_method_has_the_same_trace_shape_and_finite_values (tests.test_n08_traces.N08TraceTests.test_every_method_has_the_same_trace_shape_and_finite_values) ... ok
+test_exact_trace_has_unit_per_episode_gradient_cosine (tests.test_n08_traces.N08TraceTests.test_exact_trace_has_unit_per_episode_gradient_cosine) ... ok
+test_full_rank_streaming_update_matches_exact_trace (tests.test_n08_traces.N08TraceTests.test_full_rank_streaming_update_matches_exact_trace) ... ok
+test_two_step_cpu_training_smoke_is_deterministic (tests.test_n08_traces.N08TraceTests.test_two_step_cpu_training_smoke_is_deterministic) ... ok
+test_ambiguous_rank_two_fixture_triggers_rank_four_rescue (tests.test_n08_pareto_experiment.N08ParetoExperimentTests.test_ambiguous_rank_two_fixture_triggers_rank_four_rescue) ... ok
+test_bootstrap_is_deterministic (tests.test_n08_pareto_experiment.N08ParetoExperimentTests.test_bootstrap_is_deterministic) ... ok
+test_clear_failure_fixture_is_decisive (tests.test_n08_pareto_experiment.N08ParetoExperimentTests.test_clear_failure_fixture_is_decisive) ... ok
+test_horizons_share_teacher_but_have_unique_names (tests.test_n08_pareto_experiment.N08ParetoExperimentTests.test_horizons_share_teacher_but_have_unique_names) ... ok
+test_positive_fixture_passes (tests.test_n08_pareto_experiment.N08ParetoExperimentTests.test_positive_fixture_passes) ... ok
+test_rank_state_ladder_is_exact (tests.test_n08_pareto_experiment.N08ParetoExperimentTests.test_rank_state_ladder_is_exact) ... ok
+test_reference_premise_passes (tests.test_n08_pareto_experiment.N08ParetoExperimentTests.test_reference_premise_passes) ... ok
+test_every_primary_method_runs_one_step (tests.test_n08_pareto_experiment.N08ParetoTorchTests.test_every_primary_method_runs_one_step) ... ok
+test_clear_failure_stops_at_screen (tests.test_n08_o10_stacked_experiment.StackedDecisionTests.test_clear_failure_stops_at_screen) ... ok
+test_positive_fixture_is_strong (tests.test_n08_o10_stacked_experiment.StackedDecisionTests.test_positive_fixture_is_strong) ... ok
+test_stacked_right_subspace_is_finite_and_layer_shaped (tests.test_n08_o10_stacked_experiment.StackedTensorTests.test_stacked_right_subspace_is_finite_and_layer_shaped) ... ok
+test_stacked_right_subspace_uses_the_matched_budget (tests.test_n08_o10_stacked_experiment.StackedTensorTests.test_stacked_right_subspace_uses_the_matched_budget) ... ok
+test_selection_is_method_specific_and_uses_worst_cell_first (tests.test_n08_o10_stacked_optimizer_repair.OptimizerRepairCalibrationTests.test_selection_is_method_specific_and_uses_worst_cell_first) ... ok
+test_fresh_teacher_sets_do_not_overlap (tests.test_n08_o10_stacked_optimizer_repair.OptimizerRepairDecisionTests.test_fresh_teacher_sets_do_not_overlap) ... ok
+test_invalid_reference_suppresses_all_performance_inference (tests.test_n08_o10_stacked_optimizer_repair.OptimizerRepairDecisionTests.test_invalid_reference_suppresses_all_performance_inference) ... ok
+test_valid_clear_failure_stops_at_screen (tests.test_n08_o10_stacked_optimizer_repair.OptimizerRepairDecisionTests.test_valid_clear_failure_stops_at_screen) ... ok
+test_valid_positive_fixture_is_strong (tests.test_n08_o10_stacked_optimizer_repair.OptimizerRepairDecisionTests.test_valid_positive_fixture_is_strong) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 33.133s
+
+OK
+{
+  "boundary_ran": true,
+  "calibration_holdout_passed": true,
+  "calibration_passed": true,
+  "claim_boundary": "Persistent-state counts describe the eligibility representation. The reference code materializes event factors and uses two passes to select and apply the shared subspace, so this bridge does not yet establish one-pass online operation, lower peak CUDA memory, or lower wall time in an end-to-end system.",
+  "config": {
+    "average_start_fraction": 0.5,
+    "batch_size": 8,
+    "bootstrap_samples": 10000,
+    "boundary_steps": 450,
+    "calibration_eval_examples": 128,
+    "calibration_holdout_steps": 350,
+    "calibration_steps": 350,
+    "confirmation_steps": 550,
+    "learning_rates": [
+      0.00025,
+      0.0005,
+      0.001,
+      0.002,
+      0.004
+    ],
+    "maximum_candidate_state_fraction": 0.27,
+    "maximum_holdout_normalized_mse": 1.25,
+    "minimum_full_learning_each_cell": 0.2,
+    "minimum_full_learning_each_horizon": 0.45,
+    "minimum_full_learning_overall": 0.6,
+    "minimum_horizon_cosine": 0.85,
+    "minimum_mean_cosine": 0.9,
+    "minimum_retention_each_horizon": 0.85,
+    "minimum_retention_lower_95": 0.9,
+    "minimum_retention_mean": 0.95,
+    "minimum_strong_layerwise_gain": 0.01,
+    "noninferiority_margin_global": 0.03,
+    "noninferiority_margin_layerwise": 0.02,
+    "noninferiority_margin_replay": 0.03,
+    "primary_eval_examples": 256,
+    "reference_audit_steps": 550,
+    "screen_control_gain_floor": -0.1,
+    "screen_cosine_floor": 0.85,
+    "screen_maximum_collapse_fraction": 0.25,
+    "screen_retention_floor": 0.9,
+    "screen_steps": 350,
+    "target_noise": 0.002,
+    "weight_decay": 0.0001
+  },
+  "confirmation_ran": true,
+  "confirmation_reference_valid": true,
+  "confirmation_supportive": true,
+  "decision": "stacked_trace_optimizer_fair_supportive_without_specific_advantage_preserve_claim_boundary",
+  "frozen_evidence_entering_repair": {
+    "n08_v2": "rank-four streaming low-rank trace passed all gates at 34.03% of full persistent state and beat matched replay at long horizons",
+    "o10_v2": "rank-eight equal-layer trace retained about 99% of full-trace gain but did not establish a reliable advantage over the same-budget global oracle",
+    "stacked_v10": "screen was strong, but confirmation was invalid because the exact trace failed 10 of 96 cell headroom checks while only the candidate had been tuned"
+  },
+  "frozen_priors_before_repair": {
+    "p_big3_given_strong_positive": 0.45,
+    "p_fair_screen_advances": 0.65,
+    "p_jmlr_given_positive": 0.62,
+    "p_reference_repair_valid": 0.9,
+    "p_strong_stacked_advantage": 0.2,
+    "p_supportive_confirmation": 0.45,
+    "p_tmlr_given_positive": 0.82
+  },
+  "gate_passed": false,
+  "premise_passed": true,
+  "project": "N08+O10 Optimizer-Fair Stacked Right Subspace Repair",
+  "project_viable": true,
+  "reference_audit_passed": true,
+  "runtime_seconds": 121194.13704418764,
+  "screen_continue": true,
+  "screen_ran": true,
+  "screen_reference_valid": true,
+  "selected_learning_rates": {
+    "full_trace": {
+      "16": 0.0005,
+      "32": 0.0005,
+      "8": 0.0005
+    },
+    "global_sketch": {
+      "16": 0.0005,
+      "32": 0.0005,
+      "8": 0.0005
+    },
+    "gradient_replay": {
+      "16": 0.0005,
+      "8": 0.0005
+    },
+    "layerwise_sketch": {
+      "16": 0.0005,
+      "32": 0.0005,
+      "8": 0.0005
+    },
+    "reservoir_replay": {
+      "32": 0.0005
+    },
+    "stacked_right_subspace": {
+      "16": 0.0005,
+      "32": 0.0005,
+      "8": 0.0005
+    }
+  },
+  "source_result_archive": "n08_o10_stacked_v10_results.zip",
+  "source_result_sha256": "ff5391547a6411ef98ae7c3b344a05a2d07f16aa4e87b9a8ee0577ddaad380e4",
+  "strong_positive": false,
+  "v10_result_classification": "invalid_inconclusive_confirmation; no negative mechanism inference",
+  "version": "1.1"
+}

@@ -1,0 +1,22 @@
+{
+  "creators": [
+    {
+      "name": "Doane, Michael R.",
+      "orcid": "0009-0003-0521-8981"
+    }
+  ],
+  "title": "Low-Rank Eligibility Traces for Delayed Credit Assignment",
+  "description": "Reference implementation, frozen protocols, tests, and compact evidence for low-rank eligibility traces and shared-right-subspace compression under delayed credit assignment.",
+  "version": "0.1.0",
+  "access_right": "open",
+  "license": "mit",
+  "upload_type": "software",
+  "language": "eng",
+  "keywords": [
+    "eligibility traces",
+    "delayed credit assignment",
+    "low-rank approximation",
+    "memory compression",
+    "reinforcement learning"
+  ]
+}

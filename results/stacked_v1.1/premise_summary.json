@@ -1,0 +1,150 @@
+{
+  "candidate_state": {
+    "allocated_floats": 4352,
+    "equal_layer_rank": 8,
+    "fraction_of_full": 0.25390625,
+    "full_trace_floats": 16384,
+    "stacked_rank": 13,
+    "used_floats": 4160
+  },
+  "checks": {
+    "all_controls_receive_the_same_allocated_budget": true,
+    "all_controls_use_no_more_than_allocated": true,
+    "all_fresh_teacher_sets_are_disjoint": true,
+    "candidate_uses_at_most_27_percent_of_full_state": true,
+    "candidate_uses_no_more_than_layerwise_budget": true,
+    "known_failure_teachers_are_audit_only": true,
+    "learning_rate_grid_brackets_v10_candidate_and_control_rates": true,
+    "manual_gradients_match_finite_differences": true,
+    "paired_horizons_share_the_same_teacher": true,
+    "stacked_rank_exceeds_equal_per_layer_rank": true,
+    "stacked_right_subspace_has_no_norm_inflation": true,
+    "stacked_right_subspace_is_finite_and_informative": true,
+    "targets_are_finite_with_learning_headroom": true
+  },
+  "claim_boundary": "Persistent-state counts describe the eligibility representation. The reference code materializes event factors and uses two passes to select and apply the shared subspace, so this bridge does not yet establish one-pass online operation, lower peak CUDA memory, or lower wall time in an end-to-end system.",
+  "gate_passed": true,
+  "main_question": "Can one layer-preserving stacked eligibility sketch use a fixed state budget more reliably than equal per-layer sketches under long delayed feedback?",
+  "matched_method_states": {
+    "global_sketch": [
+      4352,
+      4173
+    ],
+    "gradient_replay": [
+      4352,
+      4290
+    ],
+    "layerwise_sketch": [
+      4352,
+      4352
+    ],
+    "reservoir_replay": [
+      4352,
+      4290
+    ],
+    "stacked_right_subspace": [
+      4352,
+      4160
+    ]
+  },
+  "metric_repair": "Control differences are divided by initial MSE. Gain retention is computed only after every exact-reference cell clears the frozen 20% learning gate.",
+  "project": "N08+O10 Optimizer-Fair Stacked Right Subspace Repair",
+  "repair_scope": "Repair the invalid v1.0 optimizer/reference apparatus only: calibrate every method by the same rule, validate selected rates on a clean holdout, and require the exact trace to pass the original failed cells before any fresh inference.",
+  "source_result_archive": "n08_o10_stacked_v10_results.zip",
+  "source_result_sha256": "ff5391547a6411ef98ae7c3b344a05a2d07f16aa4e87b9a8ee0577ddaad380e4",
+  "specific_interrogation": "Combine N08's low-rank eligibility result with O10's cross-layer boundary by sharing an adaptive right subspace across stacked layer gradients. Compare against the exact trace, equal-layer sketch, a batch global-SVD information oracle, and prospectively selected replay at 8x, 16x, and 32x horizons.",
+  "task_audits": [
+    {
+      "all_targets_finite": true,
+      "candidate_state_floats": 4352,
+      "candidate_state_fraction": 0.265625,
+      "examples": 16,
+      "first_vs_second_half_difference": 0.008938362821936607,
+      "full_trace_state_floats": 16384,
+      "gradient_replay_mean_cosine": 0.9960949230696119,
+      "initial_student_mse": 0.028981849909729643,
+      "latent_rank": 2,
+      "layer_identity_cosine_drop": 0.9947880081109393,
+      "long_gradient_replay_mean_cosine": 0.9772261037198346,
+      "long_reservoir_mean_cosine": 0.9631417305088517,
+      "long_sequence_length": 1024,
+      "long_sketch_margin_over_best_replay": 0.01964137695152579,
+      "long_sketch_mean_cosine": 0.9968674806713604,
+      "matched_replay_slots": 66,
+      "maximum_finite_difference_error": 7.516328046075493e-10,
+      "only_terminal_aggregate_target_is_exposed": true,
+      "permuted_layer_mean_cosine": 0.0002667659352930551,
+      "reservoir_mean_cosine": 0.9878184537231127,
+      "sequence_length": 128,
+      "sketch_mean_cosine": 0.9950547740462323,
+      "state_is_independent_of_sequence_length": true,
+      "task": "premise_teacher17_latent02_h01"
+    },
+    {
+      "all_targets_finite": true,
+      "candidate_state_floats": 4352,
+      "candidate_state_fraction": 0.265625,
+      "examples": 16,
+      "first_vs_second_half_difference": 0.00734677305445075,
+      "full_trace_state_floats": 16384,
+      "gradient_replay_mean_cosine": 0.9923103469026991,
+      "initial_student_mse": 0.03115607573642962,
+      "latent_rank": 4,
+      "layer_identity_cosine_drop": 0.9977836333286648,
+      "long_gradient_replay_mean_cosine": 0.9566218151654324,
+      "long_reservoir_mean_cosine": 0.947149556374143,
+      "long_sequence_length": 1024,
+      "long_sketch_margin_over_best_replay": 0.03972428408814066,
+      "long_sketch_mean_cosine": 0.9963460992535731,
+      "matched_replay_slots": 66,
+      "maximum_finite_difference_error": 1.3231820569781227e-09,
+      "only_terminal_aggregate_target_is_exposed": true,
+      "permuted_layer_mean_cosine": -0.00014717813303481562,
+      "reservoir_mean_cosine": 0.9763950188748798,
+      "sequence_length": 128,
+      "sketch_mean_cosine": 0.99763645519563,
+      "state_is_independent_of_sequence_length": true,
+      "task": "premise_teacher17_latent04_h01"
+    }
+  ],
+  "trace_cosines": [
+    {
+      "candidate_cosine": 0.9998124241828918,
+      "candidate_norm_ratio": 0.9998269081115723,
+      "global_oracle_cosine": 0.999991774559021,
+      "horizon_multiplier": 1,
+      "latent_rank": 2,
+      "layerwise_cosine": 0.9988534450531006,
+      "sequence_length": 128
+    },
+    {
+      "candidate_cosine": 0.9999666213989258,
+      "candidate_norm_ratio": 0.9999809861183167,
+      "global_oracle_cosine": 0.9999938011169434,
+      "horizon_multiplier": 8,
+      "latent_rank": 2,
+      "layerwise_cosine": 0.9989917278289795,
+      "sequence_length": 1024
+    },
+    {
+      "candidate_cosine": 0.9700413942337036,
+      "candidate_norm_ratio": 0.9700552225112915,
+      "global_oracle_cosine": 0.971076488494873,
+      "horizon_multiplier": 1,
+      "latent_rank": 4,
+      "layerwise_cosine": 0.9993597269058228,
+      "sequence_length": 128
+    },
+    {
+      "candidate_cosine": 0.9661481380462646,
+      "candidate_norm_ratio": 0.9661616086959839,
+      "global_oracle_cosine": 0.9664979577064514,
+      "horizon_multiplier": 8,
+      "latent_rank": 4,
+      "layerwise_cosine": 0.9996917247772217,
+      "sequence_length": 1024
+    }
+  ],
+  "v10_classification": "invalid_inconclusive_confirmation_due_to_reference_failure_and_candidate_only_optimizer_calibration",
+  "version": "1.1"
+}

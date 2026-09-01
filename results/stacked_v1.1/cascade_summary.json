@@ -1,0 +1,107 @@
+{
+  "boundary_ran": true,
+  "calibration_holdout_passed": true,
+  "calibration_passed": true,
+  "claim_boundary": "Persistent-state counts describe the eligibility representation. The reference code materializes event factors and uses two passes to select and apply the shared subspace, so this bridge does not yet establish one-pass online operation, lower peak CUDA memory, or lower wall time in an end-to-end system.",
+  "config": {
+    "average_start_fraction": 0.5,
+    "batch_size": 8,
+    "bootstrap_samples": 10000,
+    "boundary_steps": 450,
+    "calibration_eval_examples": 128,
+    "calibration_holdout_steps": 350,
+    "calibration_steps": 350,
+    "confirmation_steps": 550,
+    "learning_rates": [
+      0.00025,
+      0.0005,
+      0.001,
+      0.002,
+      0.004
+    ],
+    "maximum_candidate_state_fraction": 0.27,
+    "maximum_holdout_normalized_mse": 1.25,
+    "minimum_full_learning_each_cell": 0.2,
+    "minimum_full_learning_each_horizon": 0.45,
+    "minimum_full_learning_overall": 0.6,
+    "minimum_horizon_cosine": 0.85,
+    "minimum_mean_cosine": 0.9,
+    "minimum_retention_each_horizon": 0.85,
+    "minimum_retention_lower_95": 0.9,
+    "minimum_retention_mean": 0.95,
+    "minimum_strong_layerwise_gain": 0.01,
+    "noninferiority_margin_global": 0.03,
+    "noninferiority_margin_layerwise": 0.02,
+    "noninferiority_margin_replay": 0.03,
+    "primary_eval_examples": 256,
+    "reference_audit_steps": 550,
+    "screen_control_gain_floor": -0.1,
+    "screen_cosine_floor": 0.85,
+    "screen_maximum_collapse_fraction": 0.25,
+    "screen_retention_floor": 0.9,
+    "screen_steps": 350,
+    "target_noise": 0.002,
+    "weight_decay": 0.0001
+  },
+  "confirmation_ran": true,
+  "confirmation_reference_valid": true,
+  "confirmation_supportive": true,
+  "decision": "stacked_trace_optimizer_fair_supportive_without_specific_advantage_preserve_claim_boundary",
+  "frozen_evidence_entering_repair": {
+    "n08_v2": "rank-four streaming low-rank trace passed all gates at 34.03% of full persistent state and beat matched replay at long horizons",
+    "o10_v2": "rank-eight equal-layer trace retained about 99% of full-trace gain but did not establish a reliable advantage over the same-budget global oracle",
+    "stacked_v10": "screen was strong, but confirmation was invalid because the exact trace failed 10 of 96 cell headroom checks while only the candidate had been tuned"
+  },
+  "frozen_priors_before_repair": {
+    "p_big3_given_strong_positive": 0.45,
+    "p_fair_screen_advances": 0.65,
+    "p_jmlr_given_positive": 0.62,
+    "p_reference_repair_valid": 0.9,
+    "p_strong_stacked_advantage": 0.2,
+    "p_supportive_confirmation": 0.45,
+    "p_tmlr_given_positive": 0.82
+  },
+  "gate_passed": false,
+  "premise_passed": true,
+  "project": "N08+O10 Optimizer-Fair Stacked Right Subspace Repair",
+  "project_viable": true,
+  "reference_audit_passed": true,
+  "runtime_seconds": 121194.13704418764,
+  "screen_continue": true,
+  "screen_ran": true,
+  "screen_reference_valid": true,
+  "selected_learning_rates": {
+    "full_trace": {
+      "16": 0.0005,
+      "32": 0.0005,
+      "8": 0.0005
+    },
+    "global_sketch": {
+      "16": 0.0005,
+      "32": 0.0005,
+      "8": 0.0005
+    },
+    "gradient_replay": {
+      "16": 0.0005,
+      "8": 0.0005
+    },
+    "layerwise_sketch": {
+      "16": 0.0005,
+      "32": 0.0005,
+      "8": 0.0005
+    },
+    "reservoir_replay": {
+      "32": 0.0005
+    },
+    "stacked_right_subspace": {
+      "16": 0.0005,
+      "32": 0.0005,
+      "8": 0.0005
+    }
+  },
+  "source_result_archive": "n08_o10_stacked_v10_results.zip",
+  "source_result_sha256": "ff5391547a6411ef98ae7c3b344a05a2d07f16aa4e87b9a8ee0577ddaad380e4",
+  "strong_positive": false,
+  "v10_result_classification": "invalid_inconclusive_confirmation; no negative mechanism inference",
+  "version": "1.1"
+}

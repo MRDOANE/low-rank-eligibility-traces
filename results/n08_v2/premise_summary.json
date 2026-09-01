@@ -1,0 +1,245 @@
+{
+  "checks": {
+    "all_controls_use_no_more_state_than_candidate": true,
+    "fresh_v2_task_family_is_finite": true,
+    "manual_trace_matches_finite_differences": true,
+    "primary_rank_two_energy_exceeds_0_55": true,
+    "rank_four_uses_at_most_0_35_of_full_state": true,
+    "rank_two_uses_at_most_0_18_of_full_state": true,
+    "teacher_is_identical_across_horizons": true,
+    "terminal_target_uses_both_sequence_halves": true,
+    "v2_seeds_do_not_reuse_v1_seeds": true
+  },
+  "frozen_v1_result": {
+    "candidate_full_gain_retention": 0.9977202790629626,
+    "candidate_relative_gain_over_replay": -0.004520576017656549,
+    "candidate_state_fraction": 0.1701388888888889,
+    "interpretation": "V1 remains a failure of its preregistered 10% superiority gate. V2 asks a different, efficiency-focused question and does not retroactively relabel V1.",
+    "original_gate_passed": false
+  },
+  "gate_passed": true,
+  "implementation_scope": "State counts measure the persistent eligibility representation. The current reference implementation materializes event factors for benchmarking, so peak end-to-end GPU memory is not yet a publication claim.",
+  "main_question": "Can a small low-rank eligibility trace preserve delayed learning while using far less persistent state, especially as the delay gets longer?",
+  "project": "N08 Low-Rank Eligibility Traces for Delayed Outcomes",
+  "specific_interrogation": "Train at 1x, 4x, and 8x sequence lengths, calibrate each method separately, and compare ranks 1, 2, and 4 against the exact trace and two controls that receive no more state.",
+  "spectral_coverage": [
+    {
+      "rank_1_energy": 0.6862018712117445,
+      "rank_2_energy": 0.9996140561880273,
+      "rank_4_energy": 0.9999729920380712,
+      "task": "primary_latent_02_horizon_01x"
+    },
+    {
+      "rank_1_energy": 0.6259853123001333,
+      "rank_2_energy": 0.9998648435769226,
+      "rank_4_energy": 0.9999766474177418,
+      "task": "primary_latent_02_horizon_04x"
+    },
+    {
+      "rank_1_energy": 0.5766585155153944,
+      "rank_2_energy": 0.9999190287097629,
+      "rank_4_energy": 0.9999780002914358,
+      "task": "primary_latent_02_horizon_08x"
+    },
+    {
+      "rank_1_energy": 0.564940926764312,
+      "rank_2_energy": 0.8183910066669436,
+      "rank_4_energy": 0.9998273084399388,
+      "task": "primary_latent_04_horizon_01x"
+    },
+    {
+      "rank_1_energy": 0.3758400292244197,
+      "rank_2_energy": 0.64383715577794,
+      "rank_4_energy": 0.9999246512134681,
+      "task": "primary_latent_04_horizon_04x"
+    },
+    {
+      "rank_1_energy": 0.35621912036498443,
+      "rank_2_energy": 0.6306055156753403,
+      "rank_4_energy": 0.9999506432537485,
+      "task": "primary_latent_04_horizon_08x"
+    }
+  ],
+  "state_ladder": [
+    {
+      "candidate_floats": 147,
+      "candidate_fraction_of_full": 0.08506944444444445,
+      "controls_use_no_more_state_than_candidate": true,
+      "full_trace_floats": 1728,
+      "multi_timescale_floats": 144,
+      "rank": 1,
+      "replay_floats": 125
+    },
+    {
+      "candidate_floats": 294,
+      "candidate_fraction_of_full": 0.1701388888888889,
+      "controls_use_no_more_state_than_candidate": true,
+      "full_trace_floats": 1728,
+      "multi_timescale_floats": 288,
+      "rank": 2,
+      "replay_floats": 275
+    },
+    {
+      "candidate_floats": 588,
+      "candidate_fraction_of_full": 0.3402777777777778,
+      "controls_use_no_more_state_than_candidate": true,
+      "full_trace_floats": 1728,
+      "multi_timescale_floats": 576,
+      "rank": 4,
+      "replay_floats": 575
+    }
+  ],
+  "task_audits": [
+    {
+      "all_targets_finite": true,
+      "examples": 64,
+      "finite_difference_max_errors": [
+        2.184208942185295e-10,
+        2.413089502523169e-10,
+        1.3548417596154216e-11
+      ],
+      "full_trace_state_floats_per_episode": 1728,
+      "initial_student_mse": 1.3928290172771085e-05,
+      "latent_rank": 2,
+      "maximum_finite_difference_error": 2.413089502523169e-10,
+      "mean_absolute_first_vs_second_half_contribution_difference": 0.01309122797101736,
+      "mean_top_rank_two_energy": 0.9995802898981118,
+      "only_terminal_aggregate_target_is_exposed": true,
+      "rank_two_state_floats_per_episode": 294,
+      "rank_two_state_fraction": 0.1701388888888889,
+      "sequence_length": 24,
+      "task": "primary_latent_02_horizon_01x",
+      "top_rank_two_energy_by_layer": [
+        0.9996108799617026,
+        0.9995725283530641,
+        0.9995574613795685
+      ]
+    },
+    {
+      "all_targets_finite": true,
+      "examples": 64,
+      "finite_difference_max_errors": [
+        1.4340476115620726e-10,
+        1.9746678337623225e-10,
+        8.182845189202287e-12
+      ],
+      "full_trace_state_floats_per_episode": 1728,
+      "initial_student_mse": 1.2487820640671998e-05,
+      "latent_rank": 2,
+      "maximum_finite_difference_error": 1.9746678337623225e-10,
+      "mean_absolute_first_vs_second_half_contribution_difference": 0.008581411093473434,
+      "mean_top_rank_two_energy": 0.9998751193694894,
+      "only_terminal_aggregate_target_is_exposed": true,
+      "rank_two_state_floats_per_episode": 294,
+      "rank_two_state_fraction": 0.1701388888888889,
+      "sequence_length": 96,
+      "task": "primary_latent_02_horizon_04x",
+      "top_rank_two_energy_by_layer": [
+        0.9998869815373734,
+        0.9998707838333376,
+        0.9998675927377569
+      ]
+    },
+    {
+      "all_targets_finite": true,
+      "examples": 64,
+      "finite_difference_max_errors": [
+        1.2792105655995423e-10,
+        1.7874255461153288e-10,
+        5.739202705743948e-12
+      ],
+      "full_trace_state_floats_per_episode": 1728,
+      "initial_student_mse": 1.2367921044642571e-05,
+      "latent_rank": 2,
+      "maximum_finite_difference_error": 1.7874255461153288e-10,
+      "mean_absolute_first_vs_second_half_contribution_difference": 0.005828122608363628,
+      "mean_top_rank_two_energy": 0.9999245843559829,
+      "only_terminal_aggregate_target_is_exposed": true,
+      "rank_two_state_floats_per_episode": 294,
+      "rank_two_state_fraction": 0.1701388888888889,
+      "sequence_length": 192,
+      "task": "primary_latent_02_horizon_08x",
+      "top_rank_two_energy_by_layer": [
+        0.9999325918007524,
+        0.9999212065982248,
+        0.9999199546689717
+      ]
+    },
+    {
+      "all_targets_finite": true,
+      "examples": 64,
+      "finite_difference_max_errors": [
+        1.913119402480179e-10,
+        3.3688187482672216e-10,
+        3.844405471048473e-10
+      ],
+      "full_trace_state_floats_per_episode": 1728,
+      "initial_student_mse": 0.0001885862584458664,
+      "latent_rank": 4,
+      "maximum_finite_difference_error": 3.844405471048473e-10,
+      "mean_absolute_first_vs_second_half_contribution_difference": 0.030995888635516167,
+      "mean_top_rank_two_energy": 0.7920973625003325,
+      "only_terminal_aggregate_target_is_exposed": true,
+      "rank_two_state_floats_per_episode": 294,
+      "rank_two_state_fraction": 0.1701388888888889,
+      "sequence_length": 24,
+      "task": "primary_latent_04_horizon_01x",
+      "top_rank_two_energy_by_layer": [
+        0.7935770747259285,
+        0.7908633364236279,
+        0.7918516763514409
+      ]
+    },
+    {
+      "all_targets_finite": true,
+      "examples": 64,
+      "finite_difference_max_errors": [
+        1.753542909835315e-10,
+        2.164817786837192e-10,
+        2.0110657757144157e-10
+      ],
+      "full_trace_state_floats_per_episode": 1728,
+      "initial_student_mse": 0.0002199015871156007,
+      "latent_rank": 4,
+      "maximum_finite_difference_error": 2.164817786837192e-10,
+      "mean_absolute_first_vs_second_half_contribution_difference": 0.014088887721300125,
+      "mean_top_rank_two_energy": 0.6631718377511319,
+      "only_terminal_aggregate_target_is_exposed": true,
+      "rank_two_state_floats_per_episode": 294,
+      "rank_two_state_fraction": 0.1701388888888889,
+      "sequence_length": 96,
+      "task": "primary_latent_04_horizon_04x",
+      "top_rank_two_energy_by_layer": [
+        0.6667327061514945,
+        0.6613175824975634,
+        0.6614652246043375
+      ]
+    },
+    {
+      "all_targets_finite": true,
+      "examples": 64,
+      "finite_difference_max_errors": [
+        8.897707180419157e-11,
+        1.8210033394389091e-10,
+        2.6783322781831487e-10
+      ],
+      "full_trace_state_floats_per_episode": 1728,
+      "initial_student_mse": 0.00017400807701051235,
+      "latent_rank": 4,
+      "maximum_finite_difference_error": 2.6783322781831487e-10,
+      "mean_absolute_first_vs_second_half_contribution_difference": 0.007901309058070183,
+      "mean_top_rank_two_energy": 0.6175963800936018,
+      "only_terminal_aggregate_target_is_exposed": true,
+      "rank_two_state_floats_per_episode": 294,
+      "rank_two_state_fraction": 0.1701388888888889,
+      "sequence_length": 192,
+      "task": "primary_latent_04_horizon_08x",
+      "top_rank_two_energy_by_layer": [
+        0.6232456771404755,
+        0.614809203258361,
+        0.614734259881969
+      ]
+    }
+  ],
+  "version": "2.0"
+}

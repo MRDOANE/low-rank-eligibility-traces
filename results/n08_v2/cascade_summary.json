@@ -1,0 +1,51 @@
+{
+  "boundary_ran": true,
+  "boundary_supportive": true,
+  "calibration_passed": true,
+  "config": {
+    "batch_size": 64,
+    "bootstrap_samples": 5000,
+    "boundary_steps": 550,
+    "calibration_eval_examples": 256,
+    "calibration_steps": 250,
+    "decisive_failure_cosine": 0.75,
+    "decisive_failure_retention": 0.8,
+    "frontier_steps": 550,
+    "learning_rates": [
+      0.003,
+      0.01,
+      0.03
+    ],
+    "maximum_replay_excess_upper_95": 0.03,
+    "maximum_strongest_control_excess_upper_95": 0.05,
+    "minimum_full_learning_fraction": 0.5,
+    "minimum_gain_retention_lower_95": 0.94,
+    "minimum_horizon_full_learning_fraction": 0.35,
+    "minimum_horizon_gradient_cosine": 0.85,
+    "minimum_mean_gain_retention": 0.97,
+    "minimum_mean_gradient_cosine": 0.9,
+    "minimum_strong_pareto_gain": 0.03,
+    "minimum_task_horizon_retention": 0.9,
+    "primary_eval_examples": 512,
+    "primary_steps": 550,
+    "target_noise": 0.003,
+    "weight_decay": 0.0001
+  },
+  "decision": "n08_v2_strong_pareto_positive_continue_to_o10",
+  "frontier_ran": false,
+  "frozen_priors_before_v2": {
+    "p_big3_given_positive": 0.38,
+    "p_positive": 0.67,
+    "p_tmlr_given_positive": 0.72
+  },
+  "gate_passed": true,
+  "premise_passed": true,
+  "primary_passed": false,
+  "project": "N08 Low-Rank Eligibility Traces for Delayed Outcomes",
+  "rank_four_rescue_passed": true,
+  "rank_four_rescue_ran": true,
+  "runtime_seconds": 53759.57426992059,
+  "selected_trace_rank": 4,
+  "strong_pareto_signal": true,
+  "version": "2.0"
+}
