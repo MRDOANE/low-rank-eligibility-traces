@@ -3,6 +3,7 @@ message: "If you use this software or its frozen results, please cite this repos
 title: "Low-Rank Eligibility Traces for Delayed Credit Assignment"
 type: software
 version: 0.1.0
+DOI: 10.5281/zenodo.22217985
 date-released: 2026-09-01
 authors:
   - family-names: Doane
