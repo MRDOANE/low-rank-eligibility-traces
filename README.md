@@ -1,7 +1,7 @@
 # Low-Rank Delayed-Credit States
 
 [![Tests](https://github.com/MRDOANE/low-rank-eligibility-traces/actions/workflows/tests.yml/badge.svg)](https://github.com/MRDOANE/low-rank-eligibility-traces/actions/workflows/tests.yml)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22217985.svg)](https://doi.org/10.5281/zenodo.22217985)
+DOI: 10.5281/zenodo.22217984
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 This repository studies what an online learner should retain when a prediction is made now and its label arrives later. The exact delayed-credit state stores the observation-time logit Jacobian for each pending example. Low-rank alternatives compress that state before the outcome is known, then reconstruct it when feedback arrives.
