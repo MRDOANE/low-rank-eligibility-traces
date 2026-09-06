@@ -1,0 +1,206 @@
+{
+  "candidates": [
+    {
+      "audit_trials": 20,
+      "cells": [
+        {
+          "benchmark": "criteo",
+          "cosine_pass": false,
+          "delay": "natural",
+          "feedback_exposure_pass": true,
+          "mean_accuracy_gap_percentage_points": -0.45650482177734375,
+          "mean_relative_excess_loss": -0.018094592254257916,
+          "median_gradient_cosine": 0.9300396740436554,
+          "minimum_predictions_after_feedback": 523776,
+          "pass": false,
+          "performance_pass": true,
+          "seeds": 5
+        },
+        {
+          "benchmark": "yearbook",
+          "cosine_pass": true,
+          "delay": "10",
+          "feedback_exposure_pass": true,
+          "mean_accuracy_gap_percentage_points": -0.56640625,
+          "mean_relative_excess_loss": 0.068224397076926,
+          "median_gradient_cosine": 0.9916715919971466,
+          "minimum_predictions_after_feedback": 14976,
+          "pass": true,
+          "performance_pass": true,
+          "seeds": 5
+        },
+        {
+          "benchmark": "yearbook",
+          "cosine_pass": true,
+          "delay": "100",
+          "feedback_exposure_pass": true,
+          "mean_accuracy_gap_percentage_points": 0.018310546875,
+          "mean_relative_excess_loss": 0.0006959652445450212,
+          "median_gradient_cosine": 0.9963950216770172,
+          "minimum_predictions_after_feedback": 3456,
+          "pass": true,
+          "performance_pass": true,
+          "seeds": 5
+        },
+        {
+          "benchmark": "yearbook",
+          "cosine_pass": true,
+          "delay": "50",
+          "feedback_exposure_pass": true,
+          "mean_accuracy_gap_percentage_points": 0.120849609375,
+          "mean_relative_excess_loss": -0.010538218726549597,
+          "median_gradient_cosine": 0.9964387714862823,
+          "minimum_predictions_after_feedback": 9856,
+          "pass": true,
+          "performance_pass": true,
+          "seeds": 5
+        }
+      ],
+      "cosine_pass": false,
+      "feedback_exposure_pass": true,
+      "max_accuracy_gap_percentage_points": 0.120849609375,
+      "max_relative_excess_loss": 0.068224397076926,
+      "memory_pass": true,
+      "minimum_cell_median_gradient_cosine": 0.9300396740436554,
+      "minimum_memory_reduction": 12.68421052631579,
+      "performance_pass": true,
+      "rank": 2,
+      "rank_pass": false
+    },
+    {
+      "audit_trials": 20,
+      "cells": [
+        {
+          "benchmark": "criteo",
+          "cosine_pass": true,
+          "delay": "natural",
+          "feedback_exposure_pass": true,
+          "mean_accuracy_gap_percentage_points": -0.1373291015625,
+          "mean_relative_excess_loss": -0.009239839232801854,
+          "median_gradient_cosine": 0.997817188501358,
+          "minimum_predictions_after_feedback": 523776,
+          "pass": true,
+          "performance_pass": true,
+          "seeds": 5
+        },
+        {
+          "benchmark": "yearbook",
+          "cosine_pass": true,
+          "delay": "10",
+          "feedback_exposure_pass": true,
+          "mean_accuracy_gap_percentage_points": 0.208740234375,
+          "mean_relative_excess_loss": -0.028916312889840888,
+          "median_gradient_cosine": 0.9999476373195648,
+          "minimum_predictions_after_feedback": 14976,
+          "pass": true,
+          "performance_pass": true,
+          "seeds": 5
+        },
+        {
+          "benchmark": "yearbook",
+          "cosine_pass": true,
+          "delay": "100",
+          "feedback_exposure_pass": true,
+          "mean_accuracy_gap_percentage_points": -0.00244140625,
+          "mean_relative_excess_loss": -0.0006697620941081157,
+          "median_gradient_cosine": 0.9993560910224915,
+          "minimum_predictions_after_feedback": 3456,
+          "pass": true,
+          "performance_pass": true,
+          "seeds": 5
+        },
+        {
+          "benchmark": "yearbook",
+          "cosine_pass": true,
+          "delay": "50",
+          "feedback_exposure_pass": true,
+          "mean_accuracy_gap_percentage_points": 0.078125,
+          "mean_relative_excess_loss": -0.01516944706058083,
+          "median_gradient_cosine": 0.999499499797821,
+          "minimum_predictions_after_feedback": 9856,
+          "pass": true,
+          "performance_pass": true,
+          "seeds": 5
+        }
+      ],
+      "cosine_pass": true,
+      "feedback_exposure_pass": true,
+      "max_accuracy_gap_percentage_points": 0.208740234375,
+      "max_relative_excess_loss": -0.0006697620941081157,
+      "memory_pass": true,
+      "minimum_cell_median_gradient_cosine": 0.997817188501358,
+      "minimum_memory_reduction": 6.351937984496124,
+      "performance_pass": true,
+      "rank": 4,
+      "rank_pass": true
+    },
+    {
+      "audit_trials": 20,
+      "cells": [
+        {
+          "benchmark": "criteo",
+          "cosine_pass": true,
+          "delay": "natural",
+          "feedback_exposure_pass": true,
+          "mean_accuracy_gap_percentage_points": -0.041046142578125,
+          "mean_relative_excess_loss": 0.0011135097175078508,
+          "median_gradient_cosine": 0.9999988079071045,
+          "minimum_predictions_after_feedback": 523776,
+          "pass": true,
+          "performance_pass": true,
+          "seeds": 5
+        },
+        {
+          "benchmark": "yearbook",
+          "cosine_pass": true,
+          "delay": "10",
+          "feedback_exposure_pass": true,
+          "mean_accuracy_gap_percentage_points": 0.2099609375,
+          "mean_relative_excess_loss": -0.01582506813586131,
+          "median_gradient_cosine": 0.999994695186615,
+          "minimum_predictions_after_feedback": 14976,
+          "pass": true,
+          "performance_pass": true,
+          "seeds": 5
+        },
+        {
+          "benchmark": "yearbook",
+          "cosine_pass": true,
+          "delay": "100",
+          "feedback_exposure_pass": true,
+          "mean_accuracy_gap_percentage_points": 0.0,
+          "mean_relative_excess_loss": -0.0002156767372492456,
+          "median_gradient_cosine": 0.9999055862426758,
+          "minimum_predictions_after_feedback": 3456,
+          "pass": true,
+          "performance_pass": true,
+          "seeds": 5
+        },
+        {
+          "benchmark": "yearbook",
+          "cosine_pass": true,
+          "delay": "50",
+          "feedback_exposure_pass": true,
+          "mean_accuracy_gap_percentage_points": 0.06591796875,
+          "mean_relative_excess_loss": -0.0039087710973072665,
+          "median_gradient_cosine": 0.9999340176582336,
+          "minimum_predictions_after_feedback": 9856,
+          "pass": true,
+          "performance_pass": true,
+          "seeds": 5
+        }
+      ],
+      "cosine_pass": true,
+      "feedback_exposure_pass": true,
+      "max_accuracy_gap_percentage_points": 0.2099609375,
+      "max_relative_excess_loss": 0.0011135097175078508,
+      "memory_pass": true,
+      "minimum_cell_median_gradient_cosine": 0.9999055862426758,
+      "minimum_memory_reduction": 3.178432893716059,
+      "performance_pass": true,
+      "rank": 8,
+      "rank_pass": true
+    }
+  ],
+  "selected_rank": 4
+}

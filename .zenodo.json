@@ -5,9 +5,9 @@
       "orcid": "0009-0003-0521-8981"
     }
   ],
-  "title": "Low-Rank Eligibility Traces for Delayed Credit Assignment",
-  "description": "Reference implementation, frozen protocols, tests, and compact evidence for low-rank eligibility traces and shared-right-subspace compression under delayed credit assignment.",
-  "version": "0.1.0",
+  "title": "Low-Rank Delayed-Credit States: Gradient Fidelity, Memory Compression, and Competitive Limits",
+  "description": "Reference implementation, frozen protocols, and complete trial-level evidence for low-rank delayed-credit states. The v0.2.0 release adds fixed-delay Yearbook and naturally delayed Criteo validation, exact-credit audits, matched-byte replay and sketch controls, and systems measurements.",
+  "version": "0.2.0",
   "access_right": "open",
   "license": "mit",
   "upload_type": "software",
@@ -17,6 +17,7 @@
     "delayed credit assignment",
     "low-rank approximation",
     "memory compression",
-    "reinforcement learning"
+    "delayed labels",
+    "online continual learning"
   ]
 }

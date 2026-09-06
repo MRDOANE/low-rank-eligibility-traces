@@ -1,0 +1,197 @@
+{
+  "calibration": {
+    "calibration_seeds": [
+      167,
+      181
+    ],
+    "rows": [
+      {
+        "balanced_accuracy": 0.5507778545167517,
+        "benchmark": "yearbook",
+        "learning_rate": 0.0005,
+        "prequential_log_loss": 0.6864064748807461,
+        "seed": 167
+      },
+      {
+        "balanced_accuracy": 0.5069256426051503,
+        "benchmark": "yearbook",
+        "learning_rate": 0.0005,
+        "prequential_log_loss": 0.6884616791121738,
+        "seed": 181
+      },
+      {
+        "balanced_accuracy": 0.5829077430374316,
+        "benchmark": "yearbook",
+        "learning_rate": 0.001,
+        "prequential_log_loss": 0.6782784248036693,
+        "seed": 167
+      },
+      {
+        "balanced_accuracy": 0.5558773736968856,
+        "benchmark": "yearbook",
+        "learning_rate": 0.001,
+        "prequential_log_loss": 0.6826539992144282,
+        "seed": 181
+      },
+      {
+        "balanced_accuracy": 0.6001901160927954,
+        "benchmark": "yearbook",
+        "learning_rate": 0.003,
+        "prequential_log_loss": 0.668814799172059,
+        "seed": 167
+      },
+      {
+        "balanced_accuracy": 0.6001088320537862,
+        "benchmark": "yearbook",
+        "learning_rate": 0.003,
+        "prequential_log_loss": 0.6681737354463145,
+        "seed": 181
+      },
+      {
+        "balanced_accuracy": 0.6340277864901289,
+        "benchmark": "yearbook",
+        "learning_rate": 0.01,
+        "prequential_log_loss": 0.6474126878221159,
+        "seed": 167
+      },
+      {
+        "balanced_accuracy": 0.6109943041079435,
+        "benchmark": "yearbook",
+        "learning_rate": 0.01,
+        "prequential_log_loss": 0.6566404624576627,
+        "seed": 181
+      },
+      {
+        "balanced_accuracy": 0.5157382600624942,
+        "benchmark": "criteo",
+        "learning_rate": 0.0005,
+        "prequential_log_loss": 0.37498057589553907,
+        "seed": 167
+      },
+      {
+        "balanced_accuracy": 0.5033365685868337,
+        "benchmark": "criteo",
+        "learning_rate": 0.0005,
+        "prequential_log_loss": 0.3846325375671895,
+        "seed": 181
+      },
+      {
+        "balanced_accuracy": 0.5312085734910861,
+        "benchmark": "criteo",
+        "learning_rate": 0.001,
+        "prequential_log_loss": 0.3596044930969612,
+        "seed": 167
+      },
+      {
+        "balanced_accuracy": 0.5117135914182909,
+        "benchmark": "criteo",
+        "learning_rate": 0.001,
+        "prequential_log_loss": 0.3671747203614625,
+        "seed": 181
+      },
+      {
+        "balanced_accuracy": 0.5518258657916457,
+        "benchmark": "criteo",
+        "learning_rate": 0.003,
+        "prequential_log_loss": 0.34548878323172827,
+        "seed": 167
+      },
+      {
+        "balanced_accuracy": 0.5183899586631013,
+        "benchmark": "criteo",
+        "learning_rate": 0.003,
+        "prequential_log_loss": 0.35288526992492897,
+        "seed": 181
+      },
+      {
+        "balanced_accuracy": 0.5637403010592268,
+        "benchmark": "criteo",
+        "learning_rate": 0.01,
+        "prequential_log_loss": 0.33701492855329646,
+        "seed": 167
+      },
+      {
+        "balanced_accuracy": 0.531022639093168,
+        "benchmark": "criteo",
+        "learning_rate": 0.01,
+        "prequential_log_loss": 0.34417782470219255,
+        "seed": 181
+      }
+    ],
+    "selected_learning_rates": {
+      "criteo": 0.01,
+      "yearbook": 0.01
+    },
+    "selection_metric": "prequential_log_loss",
+    "shared_across_methods": true
+  },
+  "config_digest": "c8943bc3596ed6d10a1d7630a0b3163087b82e015acefba4555480a06eabdb3b",
+  "criteo": {
+    "counts": {
+      "positive": 806196,
+      "test": 1047068,
+      "train": 4084582,
+      "validation": 815913
+    },
+    "definition": {
+      "dataset_revision": "904188a63cbad78bee43cd26ff5ee4ac77903986",
+      "filter": "click == 1",
+      "forbidden_model_columns": [
+        "conversion",
+        "conversion_timestamp",
+        "conversion_id",
+        "attribution",
+        "click",
+        "click_pos",
+        "click_nb",
+        "cpo"
+      ],
+      "negative_maturity_seconds": 2592000,
+      "raw_sha256": "94ac7a465564349bc7ba008602211d5990a3c53cc133abc0aadef61ea2391a98",
+      "safe_feature_columns": [
+        "timestamp",
+        "uid",
+        "campaign",
+        "cost",
+        "time_since_last_click",
+        "cat1",
+        "cat2",
+        "cat3",
+        "cat4",
+        "cat5",
+        "cat6",
+        "cat7",
+        "cat8",
+        "cat9"
+      ],
+      "train_end_seconds": 1814400,
+      "validation_end_seconds": 2203200
+    },
+    "labels_schedule_path": "/workspace/n08_external_validation_cascade_v1.0.0/data/criteo/labels_and_schedule.parquet",
+    "labels_schedule_sha256": "cb7a9c6ff367136e844c281d0d932f7aab68f3af98fea5332197fe4658e291bd",
+    "preprocessing_digest": "a22066b9c70bbf20253ad63305fc366cc6f946bd7fc7a918b53fc03a36126948",
+    "raw_path": "/workspace/n08_external_validation_cascade_v1.0.0/data/criteo/raw/criteo_attribution_dataset.tsv.gz",
+    "retained_clicks": 5947563,
+    "safe_feature_path": "/workspace/n08_external_validation_cascade_v1.0.0/data/criteo/safe_features.parquet",
+    "safe_feature_sha256": "e4cf7b78e7c71d1ea86459adbb2834a826758aa0104263d47bbf73dff8090112"
+  },
+  "criteo_initialization": "Retrospective historical initialization on the chronological training split; optimizer state is reset, and natural reveal times govern validation and test updates.",
+  "cuda": "12.8",
+  "device": "cuda",
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "platform": "Linux-6.8.0-87-generic-x86_64-with-glibc2.39",
+  "project_doi": "10.5281/zenodo.22217985",
+  "protocol_version": "1.1.0",
+  "python": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]",
+  "torch": "2.8.0+cu128",
+  "wandb": "disabled and absent from dependencies",
+  "yearbook": {
+    "feature_manifest": "/workspace/n08_external_validation_cascade_v1.0.0/data/yearbook/frozen_feature_manifest.json",
+    "physical_images": 37921,
+    "referenced_images": 37267,
+    "root": "/workspace/n08_external_validation_cascade_v1.0.0/data/yearbook",
+    "stream_manifest": "/workspace/n08_external_validation_cascade_v1.0.0/data/yearbook/frozen_stream_manifest.json",
+    "test_images": 8715,
+    "train_images": 28552
+  }
+}

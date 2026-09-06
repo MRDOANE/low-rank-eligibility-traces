@@ -1,0 +1,19 @@
+{
+  "claim_evaluated": true,
+  "color": "YELLOW",
+  "continue_toward_iclr_claim": false,
+  "criteria": {
+    "credit_memory_reduction_at_least_3x": true,
+    "gradient_cosine_at_least_0_95_in_every_audit_cell": true,
+    "paired_advantage_for_one_comparator_at_two_or_more_conditions": false,
+    "within_exact_performance_tolerance": true
+  },
+  "mode": "full",
+  "report": "/workspace/n08_external_validation_cascade_v1.1.0/results/REPORT.md",
+  "selected_rank": 4,
+  "validity_checks": {
+    "audit_has_predictions_after_delayed_feedback_in_every_cell": true,
+    "criteo_oracle_beats_constant_predictor": true,
+    "yearbook_oracle_is_above_floor": true
+  }
+}

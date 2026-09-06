@@ -1,0 +1,106 @@
+{
+  "all_pass": false,
+  "all_valid": true,
+  "color": "YELLOW",
+  "criteria": {
+    "credit_memory_reduction_at_least_3x": true,
+    "gradient_cosine_at_least_0_95_in_every_audit_cell": true,
+    "paired_advantage_for_one_comparator_at_two_or_more_conditions": false,
+    "within_exact_performance_tolerance": true
+  },
+  "interpretation": "Continue toward an ICLR claim only when all four scientific criteria and all protocol-validity checks are true.",
+  "oracle_diagnostics": {
+    "criteo_relative_logloss_gains_over_constant_by_seed": [
+      0.22576619270220538,
+      0.21006379235454392,
+      0.22700422227939543,
+      0.2303297480399476,
+      0.2236416946806598
+    ],
+    "mean_criteo_relative_logloss_gain_over_constant": 0.22336113001135044,
+    "minimum_yearbook_mean_balanced_accuracy": 0.6420538098014787,
+    "yearbook_mean_balanced_accuracy_by_delay": {
+      "10": 0.6420538098014787,
+      "100": 0.6420538098014787,
+      "50": 0.6420538098014787
+    }
+  },
+  "positive_ci_conditions_by_comparator": {
+    "equal_byte_replay": [],
+    "random_projection": []
+  },
+  "selected_rank": 4,
+  "selected_rank_audit": {
+    "audit_trials": 20,
+    "cells": [
+      {
+        "benchmark": "criteo",
+        "cosine_pass": true,
+        "delay": "natural",
+        "feedback_exposure_pass": true,
+        "mean_accuracy_gap_percentage_points": -0.1373291015625,
+        "mean_relative_excess_loss": -0.009239839232801854,
+        "median_gradient_cosine": 0.997817188501358,
+        "minimum_predictions_after_feedback": 523776,
+        "pass": true,
+        "performance_pass": true,
+        "seeds": 5
+      },
+      {
+        "benchmark": "yearbook",
+        "cosine_pass": true,
+        "delay": "10",
+        "feedback_exposure_pass": true,
+        "mean_accuracy_gap_percentage_points": 0.208740234375,
+        "mean_relative_excess_loss": -0.028916312889840888,
+        "median_gradient_cosine": 0.9999476373195648,
+        "minimum_predictions_after_feedback": 14976,
+        "pass": true,
+        "performance_pass": true,
+        "seeds": 5
+      },
+      {
+        "benchmark": "yearbook",
+        "cosine_pass": true,
+        "delay": "100",
+        "feedback_exposure_pass": true,
+        "mean_accuracy_gap_percentage_points": -0.00244140625,
+        "mean_relative_excess_loss": -0.0006697620941081157,
+        "median_gradient_cosine": 0.9993560910224915,
+        "minimum_predictions_after_feedback": 3456,
+        "pass": true,
+        "performance_pass": true,
+        "seeds": 5
+      },
+      {
+        "benchmark": "yearbook",
+        "cosine_pass": true,
+        "delay": "50",
+        "feedback_exposure_pass": true,
+        "mean_accuracy_gap_percentage_points": 0.078125,
+        "mean_relative_excess_loss": -0.01516944706058083,
+        "median_gradient_cosine": 0.999499499797821,
+        "minimum_predictions_after_feedback": 9856,
+        "pass": true,
+        "performance_pass": true,
+        "seeds": 5
+      }
+    ],
+    "cosine_pass": true,
+    "feedback_exposure_pass": true,
+    "max_accuracy_gap_percentage_points": 0.208740234375,
+    "max_relative_excess_loss": -0.0006697620941081157,
+    "memory_pass": true,
+    "minimum_cell_median_gradient_cosine": 0.997817188501358,
+    "minimum_memory_reduction": 6.351937984496124,
+    "performance_pass": true,
+    "rank": 4,
+    "rank_pass": true
+  },
+  "successful_comparators": [],
+  "validity_checks": {
+    "audit_has_predictions_after_delayed_feedback_in_every_cell": true,
+    "criteo_oracle_beats_constant_predictor": true,
+    "yearbook_oracle_is_above_floor": true
+  }
+}

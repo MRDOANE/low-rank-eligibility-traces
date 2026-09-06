@@ -1,0 +1,126 @@
+{
+  "calibration_seeds": [
+    167,
+    181
+  ],
+  "rows": [
+    {
+      "balanced_accuracy": 0.5507778545167517,
+      "benchmark": "yearbook",
+      "learning_rate": 0.0005,
+      "prequential_log_loss": 0.6864064748807461,
+      "seed": 167
+    },
+    {
+      "balanced_accuracy": 0.5069256426051503,
+      "benchmark": "yearbook",
+      "learning_rate": 0.0005,
+      "prequential_log_loss": 0.6884616791121738,
+      "seed": 181
+    },
+    {
+      "balanced_accuracy": 0.5829077430374316,
+      "benchmark": "yearbook",
+      "learning_rate": 0.001,
+      "prequential_log_loss": 0.6782784248036693,
+      "seed": 167
+    },
+    {
+      "balanced_accuracy": 0.5558773736968856,
+      "benchmark": "yearbook",
+      "learning_rate": 0.001,
+      "prequential_log_loss": 0.6826539992144282,
+      "seed": 181
+    },
+    {
+      "balanced_accuracy": 0.6001901160927954,
+      "benchmark": "yearbook",
+      "learning_rate": 0.003,
+      "prequential_log_loss": 0.668814799172059,
+      "seed": 167
+    },
+    {
+      "balanced_accuracy": 0.6001088320537862,
+      "benchmark": "yearbook",
+      "learning_rate": 0.003,
+      "prequential_log_loss": 0.6681737354463145,
+      "seed": 181
+    },
+    {
+      "balanced_accuracy": 0.6340277864901289,
+      "benchmark": "yearbook",
+      "learning_rate": 0.01,
+      "prequential_log_loss": 0.6474126878221159,
+      "seed": 167
+    },
+    {
+      "balanced_accuracy": 0.6109943041079435,
+      "benchmark": "yearbook",
+      "learning_rate": 0.01,
+      "prequential_log_loss": 0.6566404624576627,
+      "seed": 181
+    },
+    {
+      "balanced_accuracy": 0.5157382600624942,
+      "benchmark": "criteo",
+      "learning_rate": 0.0005,
+      "prequential_log_loss": 0.37498057589553907,
+      "seed": 167
+    },
+    {
+      "balanced_accuracy": 0.5033365685868337,
+      "benchmark": "criteo",
+      "learning_rate": 0.0005,
+      "prequential_log_loss": 0.3846325375671895,
+      "seed": 181
+    },
+    {
+      "balanced_accuracy": 0.5312085734910861,
+      "benchmark": "criteo",
+      "learning_rate": 0.001,
+      "prequential_log_loss": 0.3596044930969612,
+      "seed": 167
+    },
+    {
+      "balanced_accuracy": 0.5117135914182909,
+      "benchmark": "criteo",
+      "learning_rate": 0.001,
+      "prequential_log_loss": 0.3671747203614625,
+      "seed": 181
+    },
+    {
+      "balanced_accuracy": 0.5518258657916457,
+      "benchmark": "criteo",
+      "learning_rate": 0.003,
+      "prequential_log_loss": 0.34548878323172827,
+      "seed": 167
+    },
+    {
+      "balanced_accuracy": 0.5183899586631013,
+      "benchmark": "criteo",
+      "learning_rate": 0.003,
+      "prequential_log_loss": 0.35288526992492897,
+      "seed": 181
+    },
+    {
+      "balanced_accuracy": 0.5637403010592268,
+      "benchmark": "criteo",
+      "learning_rate": 0.01,
+      "prequential_log_loss": 0.33701492855329646,
+      "seed": 167
+    },
+    {
+      "balanced_accuracy": 0.531022639093168,
+      "benchmark": "criteo",
+      "learning_rate": 0.01,
+      "prequential_log_loss": 0.34417782470219255,
+      "seed": 181
+    }
+  ],
+  "selected_learning_rates": {
+    "criteo": 0.01,
+    "yearbook": 0.01
+  },
+  "selection_metric": "prequential_log_loss",
+  "shared_across_methods": true
+}

@@ -1,0 +1,99 @@
+{
+  "budget_skipped_examples": 0,
+  "completed": true,
+  "credit_quality": {
+    "gradient_cosine_count": 0,
+    "gradient_cosine_mean": null,
+    "gradient_cosine_median": null,
+    "gradient_cosine_p05": null,
+    "gradient_cosine_p50": null,
+    "gradient_cosine_p95": null,
+    "gradient_cosine_sampled": 0,
+    "relative_error_count": 0,
+    "relative_error_mean": null,
+    "relative_error_median": null,
+    "relative_error_p05": null,
+    "relative_error_p50": null,
+    "relative_error_p95": null,
+    "relative_error_sampled": 0
+  },
+  "device": "cuda",
+  "feedback_diagnostics": {
+    "online_negative_labels": 6957,
+    "online_positive_labels": 8915,
+    "predictions_after_first_feedback": 15624,
+    "updated_before_flush": 15872,
+    "updated_only_during_flush": 12680
+  },
+  "latency": {
+    "update_latency_seconds_count": 224,
+    "update_latency_seconds_mean": 0.0026819860629205194,
+    "update_latency_seconds_median": 0.0022061262279748917,
+    "update_latency_seconds_p05": 0.002142114657908678,
+    "update_latency_seconds_p50": 0.0022061262279748917,
+    "update_latency_seconds_p95": 0.0033841938711702824,
+    "update_latency_seconds_sampled": 224
+  },
+  "model_bytes": 32896,
+  "observed_examples": 28552,
+  "predictive": {
+    "delay:delay_batches=100": {
+      "accuracy": 0.5199285514149622,
+      "balanced_accuracy": 0.5264945197245063,
+      "count": 28552,
+      "log_loss": 0.723161724973864,
+      "positive_rate": 0.5382460072849538
+    },
+    "overall": {
+      "accuracy": 0.5199285514149622,
+      "balanced_accuracy": 0.5264945197245063,
+      "count": 28552,
+      "log_loss": 0.723161724973864,
+      "positive_rate": 0.5382460072849538
+    },
+    "split:train": {
+      "accuracy": 0.5199285514149622,
+      "balanced_accuracy": 0.5264945197245063,
+      "count": 28552,
+      "log_loss": 0.723161724973864,
+      "positive_rate": 0.5382460072849538
+    },
+    "split:train|delay:delay_batches=100": {
+      "accuracy": 0.5199285514149622,
+      "balanced_accuracy": 0.5264945197245063,
+      "count": 28552,
+      "log_loss": 0.723161724973864,
+      "positive_rate": 0.5382460072849538
+    }
+  },
+  "resources": {
+    "baseline_rss_bytes": 12708298752,
+    "peak_rss_bytes": 12708298752,
+    "peak_vram_allocated_bytes": 62606848,
+    "peak_vram_reserved_bytes": 119537664,
+    "rss_increase_bytes": 0,
+    "wall_seconds": 1.5003806855529547
+  },
+  "state": {
+    "current_bytes": 0,
+    "mean_observed_bytes": 31227616.0,
+    "peak_bytes": 40542208,
+    "static_bytes": 0
+  },
+  "throughput_examples_per_second": 19029.837077299726,
+  "torch_version": "2.8.0+cu128",
+  "trial": {
+    "benchmark": "yearbook",
+    "config_digest": "c8943bc3596ed6d10a1d7630a0b3163087b82e015acefba4555480a06eabdb3b",
+    "delay": 100,
+    "learning_rate": 0.01,
+    "method": "full_replay",
+    "rank": null,
+    "seed": 83,
+    "stage": "full",
+    "target_bytes_per_event": 0,
+    "update_batch_size": 128
+  },
+  "trial_digest": "e8ec6131985bb1295be21c88b94bcd3bbf8e6f783e70b650802b5026acee0a2f",
+  "updated_examples": 28552
+}

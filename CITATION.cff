@@ -1,20 +1,21 @@
 cff-version: 1.2.0
 message: "If you use this software or its frozen results, please cite this repository."
-title: "Low-Rank Eligibility Traces for Delayed Credit Assignment"
+title: "Low-Rank Delayed-Credit States: Gradient Fidelity, Memory Compression, and Competitive Limits"
 type: software
-version: 0.1.0
-DOI: 10.5281/zenodo.22217985
-date-released: 2026-09-01
+version: 0.2.0
+date-released: 2026-09-05
 authors:
   - family-names: Doane
     given-names: Michael R.
     orcid: "https://orcid.org/0009-0003-0521-8981"
 repository-code: "https://github.com/MRDOANE/low-rank-eligibility-traces"
 url: "https://github.com/MRDOANE/low-rank-eligibility-traces"
+doi: "10.5281/zenodo.22217985"
 license: MIT
 keywords:
   - eligibility traces
   - delayed credit assignment
   - low-rank approximation
   - memory compression
-  - reinforcement learning
+  - delayed labels
+  - online continual learning

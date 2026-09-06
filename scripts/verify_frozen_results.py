@@ -156,7 +156,7 @@ def main() -> None:
     verify_stacked_confirmation()
     verify_stacked_boundary()
     verify_provenance()
-    print(json.dumps({"status": "verified", "checks": CHECKS, "release": "0.1.0"}))
+    print(json.dumps({"status": "verified", "checks": CHECKS, "release": "0.2.0"}))
 
 
 if __name__ == "__main__":

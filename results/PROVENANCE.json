@@ -1,11 +1,18 @@
 {
-  "project": "Low-Rank Eligibility Traces for Delayed Credit Assignment",
-  "release_version": "0.1.0",
+  "project": "Low-Rank Delayed-Credit States: Gradient Fidelity, Memory Compression, and Competitive Limits",
+  "release_version": "0.2.0",
   "source_package": {
     "filename": "adaptive-memory-platform-n08-o10-stacked-v1.1.zip",
     "size_bytes": 778525,
     "sha256": "9a00e7a56a51c14192b5a2332ba8374230175fb81508e86e7f8ba8ce9c5ba28a",
     "role": "Exact source package used for the final stacked v1.1 run"
+  },
+  "external_validation_source_package": {
+    "filename": "n08_external_validation_cascade_v1.1.0.zip",
+    "size_bytes": 59270,
+    "sha256": "51fb9ef099167b5724fe21a85e7fc9a314d6b7023ce3dc282bdd3b99cbb21182",
+    "included_directory": "external_validation",
+    "role": "Exact source package used for the valid two-benchmark v1.1 run"
   },
   "raw_result_archives": [
     {
@@ -32,6 +39,13 @@
       "size_bytes": 97216214,
       "sha256": "17d5ffac380b1de1784d96f841cd77e1109d673bf71920bc6d3805d57573c9a8",
       "included_summary_directory": "results/stacked_v1.1"
+    },
+    {
+      "filename": "n08_external_validation_cascade_v1.1.0_results.zip",
+      "size_bytes": 586250,
+      "sha256": "868ec7bb45a17b17f95ef26faa229b45cf7330f23f53dc2ac4dff07aff80c37b",
+      "included_summary_directory": "results/external_validation_v1.1",
+      "role": "Complete valid external-validation results; transient warm-start caches and launcher log are excluded from the committed directory"
     }
   ]
 }

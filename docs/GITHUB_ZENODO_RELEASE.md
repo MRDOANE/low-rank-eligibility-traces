@@ -1,108 +1,91 @@
-# GitHub and Zenodo Release Instructions
+# GitHub and Zenodo v0.2.0 Release Instructions
 
-## 1. Create the GitHub repository
+These instructions update the existing GitHub repository and existing Zenodo project using graphical interfaces only. The release adds the complete v1.1 external-validation source and trial-level results. It does not redistribute the Yearbook images or Criteo records.
 
-1. Sign in to GitHub as `MRDOANE`.
-2. Select **New repository**.
-3. Use the repository name `low-rank-eligibility-traces`.
-4. Suggested description: `Low-rank eligibility traces for memory-efficient delayed credit assignment.`
-5. Keep the repository **Private** until authorship, employer, manuscript, and license review are complete.
-6. Do not initialize it with a README, `.gitignore`, or license. Those files are already in this package.
-7. Create the empty repository.
+## Before changing GitHub
 
-## 2. Populate it with GitHub Desktop
+1. Download `low-rank-eligibility-traces-v0.2.0-github.zip` and extract it somewhere outside your current GitHub clone.
+2. Open GitHub Desktop, choose the existing `MRDOANE/low-rank-eligibility-traces` repository, and select **Fetch origin**.
+3. Make sure GitHub Desktop says there are no uncommitted changes. If there are changes, commit them or save a separate copy before continuing.
+4. In GitHub Desktop, select **Repository → Show in Finder** on macOS or **Repository → Show in Explorer** on Windows.
 
-1. In GitHub Desktop, select **File → Clone repository**.
-2. Choose `MRDOANE/low-rank-eligibility-traces` and clone it.
-3. Extract `low-rank-eligibility-traces-v0.1.0-github.zip` somewhere else on your computer.
-4. Open the extracted `low-rank-eligibility-traces` directory.
-5. Copy everything **inside** that directory into the cloned GitHub directory. Do not copy the outer wrapper directory.
-6. GitHub Desktop should display the new files.
-7. Use commit summary `Initial public research repository` and commit directly to `main`.
-8. Select **Push origin**.
-9. Open the repository on GitHub and confirm that the **Tests** workflow passes.
+## Replace the working files
 
-Suggested GitHub topics: `reinforcement-learning`, `eligibility-traces`, `credit-assignment`, `low-rank`, `memory-compression`, `pytorch`, `reproducibility`.
+1. Open the extracted `low-rank-eligibility-traces-v0.2.0` folder.
+2. Select everything inside that folder, including `.github`, `.gitignore`, and `.zenodo.json`. Your file browser may require **Show hidden files** to display names beginning with a period.
+3. Copy those items into the existing local clone shown by GitHub Desktop. Choose **Replace** for files with matching names and **Merge** for matching folders.
+4. Do not copy the outer `low-rank-eligibility-traces-v0.2.0` folder into the clone. Do not delete or replace the clone's hidden `.git` folder.
+5. Return to GitHub Desktop. Review the Changes list and spot-check `README.md`, `docs/NOVELTY_AUDIT.md`, `results/external_validation_v1.1`, and `scripts/verify_external_results.py`.
 
-## 3. Review before release
+The repository has more than 100 files, so GitHub's browser upload is not appropriate for this update. GitHub Desktop preserves the existing history and handles the full change as one commit.
 
-Check the rendered README, license, `CITATION.cff`, `.zenodo.json`, and Actions status. Keep the large result archives out of the commit history. Their hashes are in `results/PROVENANCE.json`.
+## Commit and publish v0.2.0
 
-When the repository is ready to become public, change its visibility under **Settings → General → Danger Zone → Change repository visibility**.
+1. In GitHub Desktop, enter the summary **Add external validation and revise claim boundary**.
+2. Select **Commit to main** and then **Push origin**.
+3. Select **Repository → View on GitHub**.
+4. Open the **Actions** tab and wait for the newest **Tests** workflow to pass.
+5. On the repository page, open **Releases**, then **Draft a new release**.
+6. Choose **Create new tag**, enter `v0.2.0`, and target `main`.
+7. Use the release title **Low-Rank Delayed-Credit States v0.2.0**.
+8. Paste these release notes:
 
-## 4. Connect the repository to Zenodo
+   > Adds the valid two-benchmark external-validation cascade and its complete trial-level results. Rank-four global SVD passed every exact-credit fidelity and memory criterion, reducing per-event credit state by 6.3519x with median gradient cosine from 0.9978 to 0.9999. The preregistered competitive gate remained YELLOW because no paired confidence interval established the required advantage over equal-byte replay or random projection. This release narrows the claim accordingly and adds a dated novelty audit, external verifier, reproducibility documentation, and TMLR-oriented manuscript outline.
 
-Do this before publishing the first GitHub release:
+9. Leave **Set as a pre-release** unchecked and select **Publish release**.
 
-1. Sign in to Zenodo and link the same GitHub account if it is not already linked.
-2. Open the Zenodo profile menu and select **GitHub**.
-3. Select **Sync now**.
-4. Find `low-rank-eligibility-traces` and enable its integration switch.
-5. Refresh and verify that Zenodo shows the repository as enabled.
+The repository already contains all committed trial-level external results. If desired, add the original `n08_external_validation_cascade_v1.1.0_results.zip` as a release asset before publishing; its expected SHA-256 is `868ec7bb45a17b17f95ef26faa229b45cf7330f23f53dc2ac4dff07aff80c37b`. A release asset is useful for preserving the exact original archive, although Zenodo's GitHub integration ordinarily archives the tagged repository source rather than GitHub release assets.
 
-Zenodo will use `.zenodo.json` for the archived software metadata. When both `.zenodo.json` and `CITATION.cff` exist, Zenodo gives `.zenodo.json` priority.
+## Archive the new release in Zenodo
 
-## 5. Create GitHub release v0.1.0
+The existing project DOI is `10.5281/zenodo.22217985`. First determine whether the GitHub repository is already connected to Zenodo.
 
-1. On GitHub, open **Releases → Draft a new release**.
-2. Choose or create tag `v0.1.0` targeting `main`.
-3. Use release title `Low-Rank Eligibility Traces v0.1.0`.
-4. Suggested release text:
+### If GitHub integration is already enabled
 
-   `Initial public research release containing the focused implementation, frozen N08/O10/stacked protocols, tests, compact result summaries, and reproducibility documentation.`
+1. Sign in to Zenodo.
+2. Open the profile menu and select **GitHub**.
+3. Select `low-rank-eligibility-traces`.
+4. Wait for `v0.2.0` to finish processing. Zenodo ingests new GitHub releases automatically after a repository is enabled.
+5. Open the DOI shown beside `v0.2.0` and verify the title, creator, ORCID, resource type **Software**, version `0.2.0`, access **Open**, and license **MIT**.
+6. Open the record's file list and confirm that the archived source contains `external_validation`, `results/external_validation_v1.1`, and `docs/NOVELTY_AUDIT.md`.
 
-5. Optionally attach the three complete result archives as GitHub release assets:
-   - `n08_pareto_v20_results.zip`
-   - `o10_horizon_v20_results.zip`
-   - `n08_o10_stacked_v11_results.zip`
-6. Publish the release.
+### If GitHub integration is not enabled
 
-GitHub release assets are preferable to committing large binary archives. The combined v1.1 archive is close to GitHub's normal 100 MiB per-file repository limit and should never enter Git history.
+1. In Zenodo, open the profile menu and select **GitHub**.
+2. Select **Sync now**.
+3. Find `low-rank-eligibility-traces` and turn on its integration switch.
+4. Return to the repository entry. If `v0.2.0` does not appear automatically, select **Create release**, follow the link to the existing GitHub release, and wait for processing.
+5. Open the resulting DOI and perform the metadata and file checks above.
 
-## 6. Confirm the Zenodo software archive
+### If the existing DOI was created by manual upload
 
-1. Return to **Zenodo → GitHub**.
-2. Open the enabled repository and wait for `v0.1.0` to finish processing.
-3. Open the Zenodo record and verify:
-   - Resource type: **Software**
-   - Title: **Low-Rank Eligibility Traces for Delayed Credit Assignment**
-   - Creator: **Michael R. Doane**
-   - ORCID: **0009-0003-0521-8981**
-   - Version: **0.1.0**
-   - Access: **Open**
-   - License: **MIT**
-4. Record the version-specific DOI assigned to v0.1.0.
+Use this route only when `10.5281/zenodo.22217985` is not managed by the GitHub integration.
 
-Zenodo's GitHub integration archives the tagged repository source. Inspect the record's file list rather than assuming GitHub release assets were copied.
+1. Open the existing Zenodo record.
+2. Select **New version**. Do not edit or replace the published old version.
+3. On GitHub, open the `v0.2.0` release and download **Source code (zip)**.
+4. In the new Zenodo draft, remove any inherited old source archive and upload the `v0.2.0` source ZIP.
+5. Set version to `0.2.0`; verify the title, creator, ORCID, description, software resource type, open access, and MIT license.
+6. Publish the new version and record both DOI values Zenodo displays: the DOI for this exact version and the DOI labeled **Cite all versions**.
 
-## 7. Optional full-results Zenodo record
+Zenodo normally assigns a new version-specific DOI to each release while retaining an all-versions concept DOI for the evolving project. Do not assume that `10.5281/zenodo.22217985` is one or the other: its Zenodo page will label it. Use the version DOI for an immutable artifact citation and the all-versions DOI for the repository as a continuing project.
 
-If the complete checkpoint archives should be preserved permanently, create a separate Zenodo upload with resource type **Dataset** and title `Full Results for Low-Rank Eligibility Traces for Delayed Credit Assignment, v0.1.0`. Upload the three result archives listed above, use the same creator and ORCID, select open access, and relate it to the software DOI with an `isSupplementTo` relationship. This keeps large checkpoints out of Git while giving them their own immutable DOI.
+## DOI metadata check
 
-## 8. Add the DOI to GitHub
+`CITATION.cff` and the README currently use `10.5281/zenodo.22217985`, the DOI supplied for this project. After Zenodo processes v0.2.0:
 
-After Zenodo supplies the software DOI:
+- If `10.5281/zenodo.22217985` is labeled **Cite all versions**, leave both files unchanged.
+- If it is labeled as the old version only, update both files through GitHub's pencil-shaped **Edit this file** control to the new all-versions DOI, commit the two edits, and leave the already published v0.2.0 tag unchanged. The immutable release still points to the exact source that produced its DOI.
+- Record the new version-specific DOI in the paper's artifact or reproducibility section.
 
-1. Add the following top-level entry to `CITATION.cff`:
+## TMLR anonymity warning
 
-   ```yaml
-   doi: "10.5281/zenodo.REPLACE_ME"
-   ```
-
-2. Add this badge near the top of `README.md`, replacing the placeholder:
-
-   ```markdown
-   [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.REPLACE_ME.svg)](https://doi.org/10.5281/zenodo.REPLACE_ME)
-   ```
-
-3. Commit with summary `Add Zenodo DOI` and push.
-4. Use the version-specific DOI when citing the exact v0.1.0 artifact. Use Zenodo's all-versions DOI when referring to the evolving project as a whole.
+The public GitHub and Zenodo records identify the author. Do not link either record in the anonymized TMLR manuscript or upload this author-identified ZIP as review supplementary material. TMLR requires both the PDF and any supplementary ZIP to be anonymized. Prepare a separate anonymous supplement with names, ORCID, GitHub URLs, DOI, and identifying metadata removed; the public repository can be added to the camera-ready version after acceptance.
 
 ## Official references
 
-- [Creating a GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
-- [Adding local code to GitHub](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
+- [Pushing changes with GitHub Desktop](https://docs.github.com/en/desktop/making-changes-in-a-branch/pushing-changes-to-github-from-github-desktop)
 - [Managing GitHub releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 - [Enabling a GitHub repository in Zenodo](https://help.zenodo.org/docs/github/enable-repository/)
 - [Archiving a GitHub release in Zenodo](https://help.zenodo.org/docs/github/archive-software/github-upload/)
-- [Zenodo `.zenodo.json` metadata](https://help.zenodo.org/docs/github/describe-software/zenodo-json/)
+- [TMLR author guidelines](https://jmlr.org/tmlr/author-guide.html)

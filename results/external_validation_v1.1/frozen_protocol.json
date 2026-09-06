@@ -1,0 +1,148 @@
+{
+  "audit": {
+    "criteo_examples": 524288,
+    "minimum_predictions_after_feedback": 1024,
+    "yearbook_examples": 16384
+  },
+  "calibration": {
+    "criteo_examples": 262144,
+    "learning_rates": [
+      0.0005,
+      0.001,
+      0.003,
+      0.01
+    ],
+    "selection_metric": "prequential_log_loss",
+    "shared_across_methods": true,
+    "yearbook_examples": 8715
+  },
+  "calibration_seeds": [
+    167,
+    181
+  ],
+  "comparators": [
+    "full_replay",
+    "equal_byte_replay",
+    "random_projection",
+    "naive_delayed",
+    "immediate_oracle"
+  ],
+  "criteo": {
+    "batch_size": 512,
+    "dataset_repo": "criteo/criteo-attribution-dataset",
+    "dataset_revision": "904188a63cbad78bee43cd26ff5ee4ac77903986",
+    "delay_bins_seconds": [
+      0,
+      3600,
+      21600,
+      86400,
+      604800,
+      2592000,
+      9223372036854775807
+    ],
+    "feedback_resolution_seconds": 3600,
+    "filename": "criteo_attribution_dataset.tsv.gz",
+    "filter": "click == 1",
+    "forbidden_model_columns": [
+      "conversion",
+      "conversion_timestamp",
+      "conversion_id",
+      "attribution",
+      "click",
+      "click_pos",
+      "click_nb",
+      "cpo"
+    ],
+    "hash_buckets": 32768,
+    "historical_initialization": "retrospective_complete_labels_on_train_split_then_optimizer_state_reset",
+    "negative_maturity_seconds": 2592000,
+    "raw_sha256": "94ac7a465564349bc7ba008602211d5990a3c53cc133abc0aadef61ea2391a98",
+    "safe_feature_columns": [
+      "timestamp",
+      "uid",
+      "campaign",
+      "cost",
+      "time_since_last_click",
+      "cat1",
+      "cat2",
+      "cat3",
+      "cat4",
+      "cat5",
+      "cat6",
+      "cat7",
+      "cat8",
+      "cat9"
+    ],
+    "train_end_seconds": 1814400,
+    "validation_end_seconds": 2203200,
+    "warm_start_epochs": 1
+  },
+  "gate": {
+    "comparison_rule": "one_fixed_comparator_at_two_independent_delay_conditions",
+    "max_accuracy_gap_percentage_points": 1.0,
+    "max_relative_excess_loss": 0.005,
+    "min_criteo_oracle_relative_logloss_gain_over_constant": 0.005,
+    "min_delays_with_positive_ci": 2,
+    "min_median_gradient_cosine": 0.95,
+    "min_memory_reduction": 3.0,
+    "min_yearbook_oracle_balanced_accuracy": 0.55,
+    "minimum_predictions_after_feedback": 1024,
+    "paired_ci_level": 0.95
+  },
+  "model": {
+    "adapter_scale": 1.0,
+    "dimension": 32,
+    "gradient_clip": 5.0,
+    "layers": 4,
+    "learning_rate": 0.001,
+    "momentum": 0.9,
+    "optimizer": "adamw",
+    "readout_scale": 1.0,
+    "weight_decay": 1e-05
+  },
+  "project_doi": "10.5281/zenodo.22217985",
+  "protocol_version": "1.1.0",
+  "ranks": [
+    2,
+    4,
+    8
+  ],
+  "repair_reason": "The v1.0 gate pooled repeated Yearbook cells over Criteo, used audit windows shorter than the tested delays, and counted outcome-defined Criteo strata as independent delay confirmations.",
+  "secondary_analyses": [
+    "o10_layerwise",
+    "o10_shared"
+  ],
+  "seeds": [
+    83,
+    97,
+    113,
+    131,
+    149
+  ],
+  "state_dtype": "float32",
+  "supersedes_protocol": "1.0.0",
+  "yearbook": {
+    "archive_url": "https://www.dropbox.com/scl/fi/7dv71y3nxrcdrpmwntr8e/faces_aligned_small_mirrored_co_aligned_cropped_cleaned.tar.gz?rlkey=h03r92h1mdr9yet2tkqosqq1k&dl=1",
+    "backbone": "torchvision_resnet18_imagenet1k_v1_layer2",
+    "batch_size": 128,
+    "crop_scale": [
+      0.08,
+      1.0
+    ],
+    "crop_size": 224,
+    "delays_in_batches": [
+      10,
+      50,
+      100
+    ],
+    "expected_archive_images": 37921,
+    "label_delay_commit": "5cd6f59e48e8015ecd540f56c08449cb05846214",
+    "label_delay_repo": "https://github.com/botcs/label-delay-exp.git",
+    "order_seed": 202408,
+    "pooled_side": 7,
+    "preprocessing_seed": 202409,
+    "split_commit": "752c48aa420fd47cd25a5043d8305f3d636ff86c",
+    "split_repo": "https://github.com/katerakelly/yearbook-dating.git",
+    "upstream_reported_train_images": 33431
+  }
+}

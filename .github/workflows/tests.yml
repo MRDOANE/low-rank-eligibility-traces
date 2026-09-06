@@ -22,16 +22,25 @@ jobs:
           python-version: "3.11"
           cache: pip
 
-      - name: Install package
+      - name: Install packages
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -e ".[dev]"
+          python -m pip install -e ".[dev,external]"
 
       - name: Run focused unit tests
         run: python -m unittest discover -s tests -v
 
       - name: Verify frozen results
-        run: python scripts/verify_frozen_results.py
+        run: |
+          python scripts/verify_frozen_results.py
+          python scripts/verify_external_results.py
+
+      - name: Run external-validation unit tests
+        env:
+          PYTHONPATH: external_validation/src
+        run: python -m unittest discover -s external_validation/tests -v
 
       - name: Lint
-        run: python -m ruff check src tests scripts/verify_frozen_results.py
+        run: >-
+          python -m ruff check src tests scripts
+          external_validation/src external_validation/tests

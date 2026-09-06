@@ -1,74 +1,104 @@
-# Low-Rank Eligibility Traces for Delayed Credit Assignment
-
-DOI: 10.5281/zenodo.22217985
+# Low-Rank Delayed-Credit States
 
 [![Tests](https://github.com/MRDOANE/low-rank-eligibility-traces/actions/workflows/tests.yml/badge.svg)](https://github.com/MRDOANE/low-rank-eligibility-traces/actions/workflows/tests.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22217985.svg)](https://doi.org/10.5281/zenodo.22217985)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-This repository contains the reference implementation, frozen protocols, tests, and compact result summaries for a study of compressed eligibility traces. Eligibility traces store information about earlier events so that a model can learn when feedback arrives much later. The study asks whether low-rank traces can preserve delayed-credit learning while using substantially less persistent state than an exact trace.
+This repository studies what an online learner should retain when a prediction is made now and its label arrives later. The exact delayed-credit state stores the observation-time logit Jacobian for each pending example. Low-rank alternatives compress that state before the outcome is known, then reconstruct it when feedback arrives.
 
-## Main result
+The central result has two parts. Rank-four global SVD reproduces exact delayed credit with high fidelity and substantially less persistent state. That fidelity does not translate into an advantage over input replay or a matched random sketch on the two external streams. The project therefore provides an empirical account of compression fidelity, learning utility, and systems cost rather than a claim of a universally superior delayed learner.
 
-The project proceeded through three prospectively gated experiments:
+## Results at a glance
 
-| Experiment | Frozen outcome | Persistent trace state | Main interpretation |
+### External validation v1.1
+
+The preregistered external study used five main seeds, ranks 2/4/8, the 37,921-image Yearbook archive under fixed delays of 10, 50, and 100 batches, and the chronological Criteo attribution stream under observed conversion delays and a fixed negative-label maturity rule.
+
+| Result | Frozen finding |
+|---|---:|
+| Selected global-SVD rank | 4 |
+| Exact/global per-event state ratio | 6.3519x |
+| Median audit gradient cosine | 0.9978 to 0.9999 |
+| Largest audit accuracy gap from exact credit | 0.2087 percentage points |
+| Full Yearbook advantage over equal-byte replay | -13.70, -7.69, -2.90 points at delays 10, 50, 100 |
+| Confirmatory wins with a positive 95% paired interval | 0 |
+| Terminal status | YELLOW: valid protocol, competitive criterion failed |
+
+The audit passed the exact-performance, gradient-cosine, feedback-exposure, and threefold-memory criteria in every benchmark/delay cell. The full comparison failed the preregistered requirement of beating the same fixed comparator at two independent conditions. Random projection was statistically tied at Yearbook delays 10 and 50, significantly better at delay 100, and inconclusive on Criteo. Equal-byte replay was substantially better on all three Yearbook delays; the Criteo interval was inconclusive. Global SVD also had unfavorable end-to-end throughput despite short median feedback-update latency.
+
+### Controlled N08/O10 studies
+
+| Experiment | Frozen outcome | Persistent trace state | Interpretation |
 |---|---|---:|---|
-| N08 v2 | Strong Pareto positive | 34.03% of exact | Rank-four streaming traces retained exact-trace learning and beat matched replay at long horizons. |
-| O10 v2 | Bounded negative | 26.56% of exact | Equal-layer rank-eight traces remained accurate, but layer-specific superiority over the global oracle was not established. |
-| Stacked v1.1 | Supportive, not strong | 25.39% of exact | The shared-right-subspace trace preserved exact-trace learning and modestly beat equal-layer and replay controls under optimizer-fair evaluation. |
+| N08 v2 | Strong Pareto positive | 34.03% of exact | Rank-four streaming traces retained exact-trace learning and beat matched replay at long synthetic horizons. |
+| O10 v2 | Bounded negative | 26.56% of exact | Equal-layer rank-eight traces remained accurate; layer-specific superiority over a global oracle was not established. |
+| Stacked v1.1 | Supportive, not strong | 25.39% of exact | Shared-right-subspace traces preserved exact learning with small gains over equal-layer and replay controls; global SVD remained slightly better. |
 
-In the final confirmation, the stacked method retained 100.036% of full-trace learning (95% teacher-bootstrap interval 100.005% to 100.093%) with a mean gradient cosine of 0.9786. Its gains were positive over equal-layer and replay controls, but very small in the primary regime, and the batch global-SVD information oracle remained slightly better. The prespecified high-rank boundary showed much larger gains over equal-layer and replay while gradient cosine fell, defining where the approximation stopped preserving the exact update direction.
+Together, the controlled and external results identify a useful boundary: low-rank structure can preserve the exact update direction, while downstream value depends on whether exact observation-time credit is preferable to retaining inputs and recomputing after the model has changed.
 
-## Claim boundary
+## What is new here
 
-The implementation establishes an information-representation result. It materializes event factors and uses two passes to estimate and apply the shared subspace. The evidence therefore does **not** establish one-pass online operation, lower peak CUDA memory, lower wall time, or superiority to the global-SVD oracle. See [docs/CLAIM_BOUNDARY.md](docs/CLAIM_BOUNDARY.md).
+Low-rank gradient approximation, eligibility traces, RTRL approximations, delayed online learning, and matrix sketching all predate this project. The contribution lies at their intersection:
 
-## Quick start
+1. a declared delayed-credit state boundary that retains label-free, observation-time Jacobians until asynchronous labels arrive;
+2. exact, SVD, shared/layerwise, random-sketch, and replay representations compared under measured byte budgets;
+3. separate tests of gradient fidelity and predictive utility on controlled tasks and two chronological external streams; and
+4. evidence that near-exact gradient reconstruction can coexist with worse online prediction and throughput than simpler alternatives.
+
+The dated literature assessment and prohibited novelty claims are in [docs/NOVELTY_AUDIT.md](docs/NOVELTY_AUDIT.md).
+
+## Fast verification
 
 Python 3.10 or newer is required.
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # Windows PowerShell: .venv\Scripts\Activate.ps1
+source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
+python -m pip install -e ".[dev,external]"
 
 python -m unittest discover -s tests -v
+PYTHONPATH=external_validation/src python -m unittest discover -s external_validation/tests -v
 python scripts/verify_frozen_results.py
+python scripts/verify_external_results.py
 ```
 
-The unit suite exercises trace construction, state accounting, finite-difference checks, optimizer selection, gate logic, and deterministic fixtures. The result verifier checks that the committed summaries reproduce the frozen terminal decisions.
+These checks cover trace construction, finite-difference agreement, state accounting, optimizer selection, gate logic, protocol integrity, and the committed terminal decisions. Full external reproduction downloads the benchmarks rather than redistributing them; see [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).
 
 ## Repository layout
 
 ```text
-src/adaptive_memory/   Reference implementations
-tests/                 Focused unit and decision tests
-scripts/               GPU launchers, monitors, and result verifier
-docs/protocols/         Frozen experimental protocols
-docs/runbooks/          Original RunPod commands
-results/                Compact frozen summaries; no model checkpoints
-paper/                  Manuscript scaffold
+src/adaptive_memory/                  Controlled N08/O10 implementations
+external_validation/                 Two-benchmark v1.1 source and launcher
+tests/                               Controlled-study unit tests
+scripts/                             Result verifiers and synthetic launchers
+docs/                                Results, protocols, claim and novelty audits
+results/n08_v2/                      N08 frozen summaries
+results/o10_v2/                      O10 frozen summaries
+results/stacked_v1.1/                Stacked frozen summaries
+results/external_validation_v1.1/    External trial-level results and decision
+paper/                               TMLR-oriented manuscript outline
 ```
 
-## Reproducing experiments
+## Reproducing the external study
 
-The exact commands and stage definitions are documented in [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md). Full reruns require a CUDA-capable PyTorch environment and substantial GPU time. The final stacked v1.1 run took 121,194 seconds on an NVIDIA RTX 6000 Ada.
+The source under `external_validation/` has one launcher:
 
-## Results and provenance
+```bash
+cd external_validation
+bash run_external_validation.sh
+```
 
-- [Result interpretation](docs/RESULTS.md)
-- [Raw-archive provenance](results/PROVENANCE.json)
-- [Frozen N08 protocol](docs/protocols/N08_V20_PROTOCOL.md)
-- [Frozen O10 protocol](docs/protocols/O10_V20_PROTOCOL.md)
-- [Frozen stacked v1.1 protocol](docs/protocols/N08_O10_STACKED_V11_PROTOCOL.md)
+It pins upstream source revisions, downloads the Yearbook and Criteo data, removes any need for Weights & Biases, freezes preprocessing and chronological splits, resumes completed trials, and logs locally. The Criteo source is CC BY-NC-SA 4.0 and is never redistributed. Full details and third-party terms are in [external_validation/README.md](external_validation/README.md) and [external_validation/THIRD_PARTY.md](external_validation/THIRD_PARTY.md).
 
-Large checkpoint archives are intentionally excluded from Git history. Their exact filenames, sizes, and SHA-256 hashes are recorded in `results/PROVENANCE.json`; they should be attached to the GitHub release and Zenodo record.
+## Claim boundary
+
+The evidence supports compression and fidelity claims for the tested adapter Jacobians. It does not support superiority over replay or sketching, higher throughput, state-of-the-art benchmark prediction, one-pass operation for every variant, or universal effectiveness across architectures. See [docs/CLAIM_BOUNDARY.md](docs/CLAIM_BOUNDARY.md).
 
 ## Citation
 
-Citation metadata are provided in [CITATION.cff](CITATION.cff). After the first Zenodo release, add the version DOI to `CITATION.cff` and the DOI badge to this README.
+Project DOI: [10.5281/zenodo.22217985](https://doi.org/10.5281/zenodo.22217985). Machine-readable metadata are in [CITATION.cff](CITATION.cff).
 
-## License
+## License and data
 
-Code and documentation are released under the [MIT License](LICENSE). Frozen numerical result files are included for research transparency and reproducibility.
+Original project code and documentation are released under the [MIT License](LICENSE). Third-party benchmark source and data retain their original terms. The repository contains derived numerical results and provenance records, not the Yearbook images, Criteo records, or upstream source trees.
